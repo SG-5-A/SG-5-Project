@@ -1,0 +1,22 @@
+
+
+/*carousellin sijainti*/
+.carousel-item img{
+    margin: auto;
+}
+
+    /* carousellin otsikon sijainti*/
+    .carousel-caption {
+            margin-bottom: 100px;
+            
+    }
+    /* otsikko etusivulle + placeholder väri*/
+    .carouselHeader{
+        font-size: 110px;
+        color: blue; 
+    }
+
+
+    #carouselExampleCaptions{
+        margin-top: 90px;
+    }
