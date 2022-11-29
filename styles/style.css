@@ -1,8 +1,10 @@
 
 
-/*carousellin sijainti*/
+/*carousellin sijainti + koko*/
 .carousel-item img{
     margin: auto;
+    width: 640px;
+    height: 460px;
 }
 
     /* carousellin otsikon sijainti*/
@@ -37,7 +39,7 @@
     .carousel-control-next{
         margin-right: 380px;
         margin-top: 145px;
-        margin-bottom: 90px;
+        margin-bottom: 130px;
         
     }
 
@@ -46,5 +48,5 @@
     .carousel-control-prev{
         margin-left: 380px;
         margin-top: 145px;
-        margin-bottom: 90px;
+        margin-bottom: 130px;
     }
