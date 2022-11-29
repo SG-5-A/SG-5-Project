@@ -35,9 +35,7 @@
     /*carousel button*/
 
     .carousel-control-next{
-
-        margin-right: 350px;
-        position: relative;
+        margin-right: 380px;
         margin-top: 145px;
         margin-bottom: 90px;
         
@@ -46,8 +44,7 @@
     /*carousel prev slide*/
 
     .carousel-control-prev{
-        position: relative;
+        margin-left: 380px;
         margin-top: 145px;
         margin-bottom: 90px;
-        margin-left: 350px;
     }
