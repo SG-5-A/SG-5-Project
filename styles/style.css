@@ -24,3 +24,9 @@
     body {
         background-color: blueviolet;
     }
+
+
+    .infoHeader{
+        font-size: 25px;
+        color: greenyellow;
+    }
