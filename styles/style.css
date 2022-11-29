@@ -16,7 +16,7 @@
         color: blue; 
     }
 
-    /* carusellin margin*/
+    /* carousellin margin*/
     #carouselExampleCaptions{
         margin-top: 90px;
     }
@@ -25,7 +25,7 @@
         background-color: blueviolet;
     }
 
-
+    /* <p> otsikot carousel*/
     .infoHeader{
         font-size: 25px;
         color: greenyellow;
