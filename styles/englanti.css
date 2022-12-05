@@ -1,14 +1,3 @@
-.quiz {
-    background-color: blueviolet;
-    height: 500px;
-}
-
-.questions {
-    background-color: aquamarine;
-    height: 100px;
-    width: 250px;
-}
-
-.answers {
-    list-style: none;
+#navbar{
+    width: fit-content;
 }
