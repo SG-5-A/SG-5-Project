@@ -1,0 +1,26 @@
+
+#quiz {
+    background-image: url(/images/oldpaper.jpg);
+    padding: 40px;
+    border-radius: 10px;
+}
+/* naviin tilaa ylös */
+.col-lg-2 {
+    padding-top: 30px;
+}
+
+/* radiot alekkain */
+.answer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* tilaa progressiin */
+.progress {
+    margin: 20px;
+    
+}
+
+.next {
+    margin: 20px;
+}
