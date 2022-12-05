@@ -1,4 +1,19 @@
 
+.navbar {
+    background-color: #5E7D7B;
+    
+}
+.nav-link {
+    color: rgb(255, 255, 255)
+}
+
+.navbar-brand {
+    color: rgb(255, 255, 255)
+}
+
+body {
+    background-color: #8EBDBA;
+}
 
 /*carousellin sijainti + koko*/
 .carousel-item img{
@@ -12,10 +27,13 @@
             margin-bottom: 100px;
             
     }
-    /* otsikko etusivulle + placeholder väri*/
+    /* Karusellin otsikkoväri (placeholder)*/
     .carouselHeader{
         font-size: 110px;
-        color: blue; 
+        color: rgb(48, 64, 63);
+        -webkit-text-stroke: rgb(207,191,192) 2px;
+        margin-bottom: 55px;
+        
     }
 
     /* carousellin margin*/
@@ -23,14 +41,15 @@
         margin-top: 90px;
     }
 
-    body {
-        background-color: blueviolet;
-    }
+    
 
-    /* <p> otsikot carousel*/
+    /* <p> Karusellin tekstin väri*/
     .infoHeader{
-        font-size: 25px;
-        color: greenyellow;
+        font-size: 35px;
+        color: #5E7D7B;
+        -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+        
+        
     }
 
 

@@ -1,3 +1,24 @@
+body {
+    background-color: #8EBDBA;
+}
+
+.navbar {
+    background-color: #5E7D7B;
+}
+
+
 #navbar{
-    width: fit-content;
+    padding: 0px;
+}
+
+.accordion{
+    width: 100%;
+}
+
+.testing {
+    display: flex;
+}
+
+form {
+    width: 100%;
 }
