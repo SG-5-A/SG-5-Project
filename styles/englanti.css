@@ -11,14 +11,11 @@ body {
     padding: 0px;
 }
 
-.accordion{
-    width: 100%;
-}
-
 .testing {
     display: flex;
 }
 
 form {
     width: 100%;
+    height: fit-content;
 }
