@@ -1,0 +1,16 @@
+body{
+    background-color:rgb(255, 255, 255);
+}
+.navbar {
+    background-color: #5E7D7B;
+    
+}
+.nav-link {
+    color: rgb(255, 255, 255)
+}
+.navbar-brand {
+    color: rgb(255, 255, 255)
+}
+#startcontainer{
+    background-color: #8EBDBA;
+}
