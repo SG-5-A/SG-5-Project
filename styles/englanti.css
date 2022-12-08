@@ -1,3 +1,7 @@
+body {
+    
+}
+
 .navbar {
     background-color: #5E7D7B;
 }
@@ -11,8 +15,13 @@
     background-color: #8EBDBA;
 }
 .accordion-item {
-    height: 150px;
+    height: 206px;
     background-color: #8EBDBA;
+    
+}
+
+input {
+    margin-left: 150px;
 }
 
 form {
