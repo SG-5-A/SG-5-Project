@@ -1,0 +1,45 @@
+body{
+    background-color: #8EBDBA
+}
+.navbar {
+    background-color: #5E7D7B;
+}
+.nav-link {
+    color: rgb(255, 255, 255)
+}
+.navbar-brand {
+    color: rgb(255, 255, 255)
+}
+#startcontainer{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    height: auto;
+}
+.startbox{
+    margin-top: 50px;
+    display: grid;
+    background-color: aliceblue;
+    width: 70vw;
+    height: 35vw;
+    border: 4px solid #5E7D7B;
+    border-radius: 10px;
+}
+.welcome{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    height: fit-content;
+    padding-top: 10px;
+}
+.start-text{
+    padding-left: 80px;
+    padding-right: 80px;
+    grid-row: 2/8;
+    grid-column: 1/3;
+    text-align: left;
+    font-size: 1.2em;
+}
