@@ -61,6 +61,15 @@ body{
      background-color: rgb(32, 32, 36);
      margin-left: 30.333%;
 }
+.pointsspan{
+    background-color:#5E7D7B;
+    color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 5%;
+}
 /*Kysymys 1*/
 .questionDivStyle{
     margin-top: 50px;
@@ -124,6 +133,11 @@ body{
     border: transparent;
     border-bottom-right-radius: 55px;
     border-top-left-radius: 55px;
+}
+.questionOne label{
+    margin-left: 5px;
+    padding: 3px;
+    border-radius: 3px;
 }
 /*Kysymys 2*/
 .questionTwo{
