@@ -54,9 +54,9 @@
  
 
             <!--Visa alkaa-->
-    <form action="">
+    <form action="" id="easyQuiz">
       <div class="welcome" id="welcome">Tervetuloa Englanti visaan. Vetovalikosta sivun oikeassa laidassa voit avata kysymyksen yksi kerrallaan ja valita oikean vastausvaihtoehdon. Lopuksi paina "Valmis" nappia viimeisen kysymyksen alalaidasta nähdäksesi tuloksesi. Vaikeusastetta voit vaihtaa valitsemalla eri luokan sivun alapalkista. Paina nappia aloittaaksesi. Good luck!
-        <button class="start">Aloita</button>
+        <button class="btn btn-outline-secondary btn-sm me-2" type="button" id="start">Aloita!</button>
       </div>
         <div class="accordion accordion-flush"        id="accordionFlushExample">
       <div class="accordion-item">
@@ -116,17 +116,10 @@
                 </div>
               </div>
             </form>
-           <!-- NavBar Vertikaalinen-->
-            <nav class="navbar bg" id="quizNav">
-                <form class="container-fluid justify-content-center">
-                  <button class="btn btn-outline-secondary btn-sm me-2" type="button" id="helpot">1-2 Luokka</button>
-                  <button class="btn btn-sm btn-outline-secondary me-2" type="button" id="keskivaikeat">3-4 Luokka</button>
-                  <button class="btn btn-sm btn-outline-secondary " type="button" id="vaikeat">5-6 Luokka</button>
-                </form>
-              </nav>
+
 
               <!-- 3-4 luokan visa -->
-              <form action="" id="keskivaikea">
+              <form action="" id="mediumQuiz">
                 <div class="accordion accordion-flush"        id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -171,9 +164,9 @@
                       </div>
                     </form>
 
-                    <!-- 5-6 Luokan visa-->
-                    <form action="" id="vaikea">
-                      <div class="accordion accordion-flush"        id="accordionFlushExample">
+<!-- 5-6 Luokan visa-->
+<form action="" id="hardQuiz">
+  <div class="accordion accordion-flush"        id="accordionFlushExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingOne">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
@@ -214,17 +207,27 @@
                                   <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
                                 </div>
                               </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Kysymys 5</button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                </div>
-                              </div>
-                            </div>
-                          </form>    
-      
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Kysymys 5
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application
+          </div>
+        </div>
+      </div>
+  </div>
+</form>    
+
+<!-- NavBar Vertikaalinen-->
+<nav class="navbar bg" id="quizNav">
+  <form class="container-fluid justify-content-center">
+    <button class="btn btn-outline-secondary btn-sm me-2" type="button" id="easy">1-2 Luokka</button>
+    <button class="btn btn-sm btn-outline-secondary me-2" type="button" id="medium">3-4 Luokka</button>
+    <button class="btn btn-sm btn-outline-secondary " type="button" id="hard">5-6 Luokka</button>
+  </form>
+</nav>
 
 
 

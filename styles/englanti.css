@@ -34,11 +34,26 @@ form {
     color: black;
 }
 
-#keskivaikea {
+#easyQuiz {
     display: none;
 }
 
-#vaikea {
+#easyQuiz.visible {
+    display: block;
+    
+}
+
+#mediumQuiz {
+    display: none;
+}
+
+#mediumQuiz.visible {
+    display: block;
+    
+}
+
+
+#hardQuiz {
     display: none;
 }
 
@@ -48,11 +63,10 @@ form {
     height: 140px;
     position: absolute;
     margin-left: 500px;
-    margin-top: 57px;
+    margin-top: 60px;
 }
 
-.start {
-    margin: 8px 0px 2px 25px;
+#start {
+    margin: 5px 0px 0px 15px;
+    width: 80px;
 }
-
-
