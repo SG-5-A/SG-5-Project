@@ -9,12 +9,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <!--Oma CSS-->
-<link rel="stylesheet" href="/SG-5-Project/styles/englanti.css">
+<link rel="stylesheet" href="../styles/englanti.css">
 <body>
   <!-- Nav Bar horisontaalinen-->
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Etusivu</a>
+      <a class="navbar-brand" href="../index.html">Etusivu</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,7 +24,7 @@
             <a class="nav-link" aria-current="page" href="pages/maantieto.html">Maantieto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/Englanti.html">Englanti</a>
+            <a class="nav-link" href="Englanti.html">Englanti</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Yhteiskuntaoppi</a>
@@ -51,73 +51,190 @@
       </div>
     </div>
   </nav>
-  <!-- NavBar Vertikaalinen-->
-<div class="testing">
-  <nav class="navbar navbar-expand-lg bg-light" id="navbar">  
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav flex-column">
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">1-2 Luokka</a>
-          </li>
+ 
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">3-4 Luokka</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">5-6 Luokka</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
             <!--Visa alkaa-->
-  <form action="">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <form action="" id="easyQuiz">
+      <div class="welcome" id="welcome">Tervetuloa Englanti visaan. Vetovalikosta sivun oikeassa laidassa voit avata kysymyksen yksi kerrallaan ja valita oikean vastausvaihtoehdon. Lopuksi paina "Valmis" nappia viimeisen kysymyksen alalaidasta nähdäksesi tuloksesi. Vaikeusastetta voit vaihtaa valitsemalla eri luokan sivun alapalkista. Paina nappia aloittaaksesi. Good luck!
+        <button class="btn btn-outline-secondary btn-sm me-2" type="button" id="start">Aloita!</button>
+      </div>
+        <div class="accordion accordion-flush"        id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-                      Accordion Item #1
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                      Kysymys 1
           </button>
         </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          <div class="accordion-body">
+            Mikä näist EI ole eläin? <br>
+            <input type="radio" id="answer1" value="Pig" name="answer">
+            <label for="answer1"> Pig</label> <br>
+            <input type="radio" id="answer2" value="Dog" name="answer">
+            <label for="answer2"> Dog</label> <br>
+            <input type="radio" id="answer3" value="Fork" name="answer">
+            <label for="answer3"> Fork</label>
+          
+          </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Accordion Item #2
+                      Kysymys 2
                     </button>
                   </h2>
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    <div class="accordion-body">  Mikä näistä EI ole kulkupeli? <br>
+                      <input type="radio" id="answer1" name="answer" value="Train">
+                      <label for="answer1"> Train</label> <br>
+                      <input type="radio" id="answer2" name="answer" value="Bush">
+                      <label for="answer2"> Bush</label> <br>
+                      <input type="radio" id="answer3" name="answer" value="Airplane">
+                      <label for="answer3"> Airplane</label></div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Accordion Item #3
+                      Kysymys 3
                     </button>
                   </h2>
                   <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    <div class="accordion-body">Mikä näistä EI ole maa? <br>
+                      <input type="radio" id="answer1" name="answer" value="Sweetland">
+                      <label for="answer1">Sweetland</label> <br>
+                      <input type="radio" id="answer2" name="answer" value="Estonia">
+                      <label for="answer2">Estonia</label> <br>
+                      <input type="radio" id="answer3" name="answer" value="Iceland">
+                      <label for="answer3">Iceland</label> <br>
+                      <input type="button" value="Valmis" id="valmis">
+                      
+                    </div>
+                      
                   </div>
                 </div>
               </div>
             </form>
-          
+
+
+              <!-- 3-4 luokan visa -->
+              <form action="" id="mediumQuiz">
+                <div class="accordion accordion-flush"        id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                              Kysymys 1
+                  </button>
+                </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Kysymys 2
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Kysymys 3
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Kysymys 4
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+
+<!-- 5-6 Luokan visa-->
+<form action="" id="hardQuiz">
+  <div class="accordion accordion-flush"        id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                    Kysymys 1
+                        </button>
+                      </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Kysymys 2
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Kysymys 3
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Kysymys 4
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                </div>
+                              </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Kysymys 5
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application
+          </div>
         </div>
-      </div> 
-      
+      </div>
+  </div>
+</form>    
+
+<!-- NavBar Vertikaalinen-->
+<nav class="navbar bg" id="quizNav">
+  <form class="container-fluid justify-content-center">
+    <button class="btn btn-outline-secondary btn-sm me-2" type="button" id="easy">1-2 Luokka</button>
+    <button class="btn btn-sm btn-outline-secondary me-2" type="button" id="medium">3-4 Luokka</button>
+    <button class="btn btn-sm btn-outline-secondary " type="button" id="hard">5-6 Luokka</button>
+  </form>
+</nav>
 
 
 
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="../JavaScript/englanti.js"></script>
 </body>
 </html>

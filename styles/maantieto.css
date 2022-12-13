@@ -1,0 +1,44 @@
+
+/*body background color*/
+body {
+    background-color: #8EBDBA;
+}
+
+
+/*nav bar background color*/
+
+.navbar{
+    background-color: #5E7D7B;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255)
+}
+
+
+.container {
+height: 150px;
+
+}
+
+.container b{
+font-size: 3em;
+}
+
+.container p{
+    font-size: 2em;
+}
+
+#accordionExample{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+
+#next{
+   border-radius: 10px;
+   border: 0px;
+   
+}

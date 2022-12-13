@@ -1,12 +1,15 @@
 
+body {
+    background-color:;
+}
 #quiz {
     background-image: url(/images/oldpaper.jpg);
     padding: 40px;
     border-radius: 10px;
 }
-/* naviin tilaa ylös */
+/* naviin tilaa */
 .col-lg-2 {
-    padding-top: 30px;
+    padding: 30px;
 }
 
 /* radiot alekkain */
@@ -18,9 +21,23 @@
 /* tilaa progressiin */
 .progress {
     margin: 20px;
+    background-color: #b4c4c3;
     
 }
 
 .next {
     margin: 20px;
+    background-color: #b4c4c3;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.sidenav {
+    background-color: #5E7D7B;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.nav-text {
+    color: #fff;
 }
