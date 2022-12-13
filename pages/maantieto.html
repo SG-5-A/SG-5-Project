@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etusivu</title>
+    <script src="/JavaScript/maantieto.js" defer></script>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <link rel="stylesheet" href="../styles/maantieto.css">
@@ -58,7 +59,8 @@
         <div class="row">
           <div class="col">
             <b>Tervetuloa Maantieto visaan!</b><br>
-            <p>Tässä visassa tulet vastaamaan maantieto kysymyksiin </p>
+            <p>Tässä visassa tulet vastaamaan maantieto kysymyksiin. <br>
+            Jokaisessa kysymyksessä on 3 vaihtoehtoa valitse näistä yksi. </p>
           </div>
         </div>
       </div>
@@ -68,41 +70,59 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              kysymys #1
+              Mikä on suomen pääkaupunki?
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              kyssäri1
+              <label for="" name="">Oulu</label>
+              <input type="radio" name="quest" value=""><br>
+              <label for="">Tampere</label>
+              <input type="radio" name="quest" value=""><br>
+              <label for="">Helsinki</label>
+              <input type="radio" name="quest" value="">
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              kysymys #2
+              Missä valtiossa on suurin väkiluku?
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              kyssäri2
+              <label for="" name="">Intia</label>
+              <input type="radio" name="quest2" value=""><br>
+              <label for="">Kiina</label>
+              <input type="radio" name="quest2" value=""><br>
+              <label for="">Yhdysvallat</label>
+              <input type="radio" name="quest2" value="">
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              kysymys #3
+              Mikä seuraavista vaihtoehdoista on valtameri?
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-             kyssäri3
+              <label for="" name=""> Itämeri</label>
+              <input type="radio" name="quest3" value=""><br>
+              <label for="">Mustameri</label>
+              <input type="radio" name="quest3" value=""><br>
+              <label for="">Tyynimeri</label>
+              <input type="radio" name="quest3" value="">
             </div>
           </div>
         </div>
+              
       </div>
       <!--accordion end-->
+      <button onclick="onClick()" id="next">Seuraava</button>
+
       
     
       <!-- JavaScript Bundle with Popper -->
