@@ -4,8 +4,6 @@
 let start = document.getElementById("start");
 let welcome = document.getElementById("welcome");
 
-
-
 start.addEventListener("click", closeIntroduction);
 
 function closeIntroduction (e) {
@@ -18,6 +16,7 @@ function closeIntroduction (e) {
     }
 }
 
+//1-2 luokan visan näkyvyys ja muiden visojen piilotus
 let easy = document.getElementById("easy");
 let easyQuiz = document.getElementById("easyQuiz");
 
@@ -40,7 +39,7 @@ function openEasyQuiz(event) {
 }
 
 
-
+//3-4 luokan visan näkyvyys ja siirtyminen sinne sekä muiden piilotus
 let medium = document.getElementById("medium");
 let mediumQuiz = document.getElementById("mediumQuiz");
 
@@ -60,6 +59,7 @@ function openMediumQuiz(event) {
     hardQuiz.classList.remove("visible");
 }
 
+// 5-6 luokan visan näkyvyys ja siirtyminen sinne sekä muiden piilotus
 let hard = document.getElementById("hard");
 let hardQuiz = document.getElementById("hardQuiz");
 
