@@ -36,8 +36,7 @@ function openEasyQuiz(event) {
     easyQuiz.classList.add("visible");
 
     mediumQuiz.classList.remove("visible");
-
-
+    hardQuiz.classList.remove("visible");
 }
 
 
@@ -58,14 +57,13 @@ function openMediumQuiz(event) {
     mediumQuiz.classList.add("visible");
 
     easyQuiz.classList.remove("visible");
-
-
+    hardQuiz.classList.remove("visible");
 }
 
 let hard = document.getElementById("hard");
 let hardQuiz = document.getElementById("hardQuiz");
 
-hardQuiz.addEventListener("click", openHardQuiz);
+hard.addEventListener("click", openHardQuiz);
 
 /**
  * @param {event} event
