@@ -102,7 +102,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
     }
-    if(labelB.innerHTML === incorrect1 || labelB.innerHTML === incorrect1){
+    if(labelB.innerHTML === incorrect1 || labelB.innerHTML === incorrect2){
       console.log("incorrect");
       labelB.style.backgroundColor = "rgba(255, 0, 0, 0.61)";
       optionA.disabled = true;
