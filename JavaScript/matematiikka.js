@@ -24,7 +24,7 @@ let span = document.createElement("span");
     let answers = [];
 
 // Funktio asettaa vastaukset satunnaiseen järjestykseen
-function assignOptions(nextButton, Options, labelA, labelB, labelC) {
+function assignOptions(nextButton, Options, labelA, labelB, labelC, p, question) {
   nextButton.addEventListener("click", () =>{
 
   let randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -32,17 +32,31 @@ function assignOptions(nextButton, Options, labelA, labelB, labelC) {
   labelA.innerHTML = Options[randomNumber-1];
   labelB.innerHTML = Options[randomNumber%3];
   labelC.innerHTML = Options[(randomNumber+1)%3];
+  p.innerHTML = question
 });
 }
+//Luo satunnaisen luvun tietyltä väliltä, ei luo num1 ja num2.
+//https://stackoverflow.com/a/27406449
+function generateRandom(min, max, num1) {
+  var rtn = Math.floor(Math.random() * (max - min + 1)) + min;
+  return rtn == num1 ? generateRandom(min, max, num1) : rtn;
+}
 // Kysymys 1 vastaukset
-let OptionsQ1 = ["2", "11", "0"];
+let randomQ1value = Math.floor(Math.random()*3)+1;
+let randomQ1value2 = Math.floor(Math.random()*3)+1;
+
+let correctQ1 = randomQ1value + randomQ1value2;
+let incorrect1Q1 = generateRandom(1, 10, correctQ1)
+let incorrect2Q1 = generateRandom(1, 10, incorrect1Q1);
+let OptionsQ1 = [correctQ1, incorrect1Q1, incorrect2Q1];
 let Q1labelA = document.querySelector(".q1labela");
 let Q1labelB = document.querySelector(".q1labelb");
 let Q1labelC = document.querySelector(".q1labelc");
-
+let hques1 = document.querySelector(".hques1");
+let question_one = "Kuinka paljon on " + randomQ1value + " " + "+" + " " + randomQ1value2 + " ?";
 startbutton.addEventListener("click", startquiz);
-assignOptions( startbutton, OptionsQ1, Q1labelA, Q1labelB, Q1labelC);
-
+assignOptions( startbutton, OptionsQ1, Q1labelA, Q1labelB, Q1labelC, hques1, question_one);
+console.log("correct", correctQ1 ,")","incorrect1", incorrect1Q1, ")","incorrect2", incorrect2Q1);
 //Aloittaa visan
 function startquiz(){
     startdiv.style.display = "none" ;
@@ -80,14 +94,14 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
   // Tarkistaa, mikä vastaus valittu. 
   if (optionA.checked) {
     // Jos vastaus oikein, seuraavat toiminnot:
-    if (labelA.innerHTML === correct) {
+    if (labelA.innerHTML == correct) {
       console.log("correct");
       labelA.style.backgroundColor = "rgba(0, 224, 0, 0.61)";
       optionB.disabled = true;
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
     }//Jos väärin 
-    if(labelA.innerHTML === incorrect1 || labelA.innerHTML === incorrect2){
+    if(labelA.innerHTML == incorrect1 || labelA.innerHTML == incorrect2){
       console.log("incorrect");
       labelA.style.backgroundColor = "rgba(255, 0, 0, 0.61)";
       optionB.disabled = true;
@@ -95,14 +109,14 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       style_incorrect(lockbutton, nextbutton, p, explanation);
     }
   }   if (optionB.checked) {
-    if (labelB.innerHTML === correct) {
+    if (labelB.innerHTML == correct) {
       console.log("correct");
       labelB.style.backgroundColor = "rgba(0, 224, 0, 0.61)";
       optionA.disabled = true;
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
     }
-    if(labelB.innerHTML === incorrect1 || labelB.innerHTML === incorrect2){
+    if(labelB.innerHTML == incorrect1 || labelB.innerHTML == incorrect2){
       console.log("incorrect");
       labelB.style.backgroundColor = "rgba(255, 0, 0, 0.61)";
       optionA.disabled = true;
@@ -110,14 +124,14 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       style_incorrect(lockbutton, nextbutton, p, explanation);
     }
   }   if (optionC.checked) {
-    if (labelC.innerHTML === correct) {
+    if (labelC.innerHTML == correct) {
       console.log("correct");
       labelC.style.backgroundColor = "rgba(0, 224, 0, 0.61)";
       optionA.disabled = true;
       optionB.disabled = true;
       style_correct(lockbutton, nextbutton, p);
     }
-    if(labelC.innerHTML === incorrect1 || labelC.innerHTML === incorrect2){
+    if(labelC.innerHTML == incorrect1 || labelC.innerHTML == incorrect2){
       console.log("incorrect");
       labelC.style.backgroundColor = "rgba(255, 0, 0, 0.61)";
       optionA.disabled = true;
@@ -132,10 +146,7 @@ let lockq1 = document.querySelector(".lockq1");
 let Q1optionA = document.querySelector(".q1optiona");
 let Q1optionB = document.querySelector(".q1optionb");
 let Q1optionC = document.querySelector(".q1optionc");
-let correctQ1 = "2";
-let incorrect1Q1 = "11";
-let incorrect2Q1 = "0";
-let explanation1 = "Vastauksesi on väärin. 1 + 1 on 2.";
+let explanation1 = "Vastauksesi on väärin. " + randomQ1value + " " + "+" + " " + randomQ1value2 + " on " + correctQ1;
 let answerone = document.querySelector(".answerone");
 
 check_answer(lockq1, buttonToQ2, Q1optionA, Q1optionB, Q1optionC, Q1labelA, Q1labelB, Q1labelC, correctQ1,
@@ -170,7 +181,7 @@ let Q2optionC = document.querySelector(".q2optionc");
 let correctQ2 = "12";
 let incorrect1Q2 = "16";
 let incorrect2Q2 = "-6";
-let answerTwo = document.querySelector(".AnswerTwo")
+let answerTwo = document.querySelector(".answertwo")
 let explanation2 = "Vastauksesi on väärin. Oikea vastaus on 12";
 
 check_answer(lockq2, buttontoQ3, Q2optionA, Q2optionB, Q2optionC, Q2labelA, Q2labelB, Q2labelC,
