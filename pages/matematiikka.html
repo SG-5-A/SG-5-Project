@@ -55,37 +55,64 @@
         </div>
       </nav>
       <!-- Navbar loppuu -->
-    <div id="startcontainer">
+      <!--Visa-->
+  <div id="startcontainer">
       <div class="startbox">
         <Header class="welcome">Tervetuloa matematiikan tietovisaan</Header>
         <div class="start-text">
-        <p >Tässä visassa tulet vastaamaan 1-6 luokkalaisille tarkoitettuihin matematiikan tehtäviin. Visassa on 5 tehtävää, jokaisessa tehtävässä 2-3 vastausvaihtoehtoa. </p>
+        <p >Tässä visassa tulet vastaamaan 1-6 luokkalaisille tarkoitettuihin matematiikan tehtäviin. Visassa on 5 tehtävää, jokaisessa tehtävässä 2-3 vastausvaihtoehtoa. Visan maksimipistemäärä on 10 pistettä.</p>
         </div>
         <button class="startbutton" type="button">Aloita tietovisa</button>
       </div>
       <div class="questionOne">
         <header>Kysymys 1.</header>
-        <div>
-        <h3>Paljonko on 1+1?</h3>
-        <input class="q1radioa" type="radio" name="answertoq1"><label class="q1labela" for="q1radioa"> a) 0</label><br>
-        <input class="q1radiob" type="radio" name="answertoq1"><label class="q1labelb" for="q1radiob"> b) 2</label><br>
-        <input class="q1radioc" type="radio" name="answertoq1"><label class="q1labelc" for="q1radioc"> c) 11</label>
+        <div class="radiocontainer">
+        <h3>Kuinka paljon on 1+1?</h3>
+        <input class="q1optiona" type="radio" name="answertoq1"><span> a)</span><label class="q1labela" for="q1optiona"> </label><br>
+        <input class="q1optionb" type="radio" name="answertoq1"><span> b)</span><label class="q1labelb" for="q1optionb"> </label><br>
+        <input class="q1optionc" type="radio" name="answertoq1"><span> c)</span><label class="q1labelc" for="q1optionc"> </label>
       </div>
+      <p class="answerone"></p>
         <button class="lockq1" type="button">Lukitse vastaus</button>
         <button class="q1next" type="button">Seuraava</button>
     </div>
     <div class="questionTwo">
       <header>Kysymys 2.</header>
-      <div>
-      <h3>-------</h3>
-      <input type="radio" name="answertoq2"><label for=""> a)</label><br>
-      <input type="radio" name="answertoq2"><label for=""> b)</label><br>
-      <input type="radio" name="answertoq2"><label for=""> c)</label>
+      <div class="radiocontainer">
+      <h3>Kuinka paljon on 6 kertaa 2?</h3>
+      <input class="q2optiona" type="radio" name="answertoq2"><span> a)</span><label class="q2labela" for="q2optiona"></label><br>
+      <input class="q2optionb" type="radio" name="answertoq2"><span> b)</span><label class="q2labelb" for="q2optionb"></label><br>
+      <input class="q2optionc" type="radio" name="answertoq2"><span> c)</span><label class="q2labelc" for="q2optionc"></label>
     </div>
+    <p class="answertwo"></p>
       <button class="lockq2" type="button">Lukitse vastaus</button>
       <button class="q2next" type="button">Seuraava</button>
   </div>
+  <div class="questionThree">
+    <header>Kysymys 3.</header>
+    <div>
+    <h3>------------</h3>
+    <input class="q3optiona" type="radio" name="answertoq3"><span> a)</span><label class="q3labela" for="q3optiona"></label><br>
+    <input class="q3optionb" type="radio" name="answertoq3"><span> b)</span><label class="q3labelb" for="q3optionb"></label><br>
+    <input class="q3optionc" type="radio" name="answertoq3"><span> c)</span><label class="q3labelc" for="q3optionc"></label>
   </div>
+  <p class="answerthree"></p>
+    <button class="lockq3" type="button">Lukitse vastaus</button>
+    <button class="q3next" type="button">Seuraava</button>
+</div>
+<div class="questionFour">
+  <header>Kysymys 4.</header>
+  <div>
+  <h3>------------</h3>
+  <input class="q4optiona" type="radio" name="answertoq4"><span> a)</span><label class="q4labela" for="q4optiona"></label><br>
+  <input class="q4optionb" type="radio" name="answertoq4"><span> b)</span><label class="q4labelb" for="q4optionb"></label><br>
+  <input class="q4optionc" type="radio" name="answertoq4"><span> c)</span><label class="q4labelc" for="q4op"></label>
+</div>
+<p class="answerfour"></p>
+  <button class="lockq4" type="button">Lukitse vastaus</button>
+  <button class="q4next" type="button">Seuraava</button>
+  </div>
+</div>>
     <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>

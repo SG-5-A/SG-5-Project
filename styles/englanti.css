@@ -2,7 +2,6 @@
     background-color: #5E7D7B;
 }
 
-
 #navbar{
     padding: 0px;
 }
@@ -10,15 +9,27 @@
 .accordion-button {
     background-color: #8EBDBA;
 }
-.accordion-item {
-    height: 206px;
-    background-color: #8EBDBA;
-    
+.accordion-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
-input {
-    margin-left: 150px;
+
+.accordion-item {
+    min-height: 278px;
+    background-color: #8EBDBA;
 }
+
+.accordion-header {
+    background-color: #5E7D7B;
+}
+
+/*input {
+    margin-left: 150px;
+}*/
 
 form {
     width: 100%;
@@ -27,6 +38,7 @@ form {
 
 #quizNav {
     background-color: #5E7D7B;
+    position:inherit;
 }
 
 .btn {
@@ -34,25 +46,43 @@ form {
     color: black;
 }
 
-#keskivaikea {
+#easyQuiz {
     display: none;
 }
 
-#vaikea {
+#easyQuiz.visible {
+    display: block;
+    
+}
+
+#mediumQuiz {
     display: none;
+}
+
+#mediumQuiz.visible {
+    display: block;
+    
+}
+
+#hardQuiz {
+    display: none;
+}
+
+#hardQuiz.visible {
+    display: block;
 }
 
 #welcome {
     border: solid 1px black;
-    width: 500px;
+    width: 505px;
     height: 140px;
     position: absolute;
     margin-left: 500px;
-    margin-top: 57px;
+    margin-top: 60px;
+    justify-content: center;
 }
 
-.start {
-    margin: 8px 0px 2px 25px;
+#start {
+    margin: 5px 0px 0px 15px;
+    width: 80px;
 }
-
-
