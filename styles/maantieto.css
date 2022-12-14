@@ -19,6 +19,14 @@ body {
 .container {
 height: 150px;
 
+
+}
+#textContainer{
+    display: none;
+}
+
+#textContainer.visible{
+    display: block;
 }
 
 .container b{
@@ -60,7 +68,31 @@ font-size: 2em;
     display: none;
 }
 
+
+
+#resultButton{
+    text-align: end;
+    margin-right: 300px;
+    display: none;
+}
+
+#resultButton.visible{
+    display: block;
+
+}
+
+
+
+
+
 #resultDiv{
     display: none;
+    margin-left: 100px;
+    margin-top: 200px;
+    font-size: 1.3em;
+}
+#resultDiv.visible{
+    display: block;
+
 }
 
