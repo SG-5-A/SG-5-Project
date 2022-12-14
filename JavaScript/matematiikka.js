@@ -14,7 +14,7 @@ let buttontoQ4 = document.querySelector(".q3next")
 let buttontoQ5 = document.querySelector(".q4next")
 let finishbutton = document.querySelector(".finish")
 
-//funktiolla palauttaa labelin, classilla ".q" + numero + "label" + kirjain;
+//funktiolla palauttaa labelin, classilla ".q" + kysymyksen numero + "label" + vaihtoehdon kirjain;
 function label(number, letter){
  let name = ".q" + number + "label" + letter;
  let element = document.querySelector(name);
@@ -35,7 +35,7 @@ let span = document.createElement("span");
     //Vastausten tallentaminen, (kesken)
     let answers = [];
 
-// Funktio asettaa vastaukset satunnaiseen järjestykseen
+// Funktio asettaa vastaus vaihtoehdot satunnaiseen järjestykseen
 function assignOptions(nextButton, Options, labelA, labelB, labelC, p, question) {
   nextButton.addEventListener("click", () =>{
 
@@ -47,7 +47,7 @@ function assignOptions(nextButton, Options, labelA, labelB, labelC, p, question)
   p.innerHTML = question;
 });
 }
-//Luo satunnaisen luvun tietyltä väliltä, num1 ja num2 estää samojen arvojen tuottamista eri vastauskohtiin).
+//Luo satunnaisen luvun tietyltä väliltä. Ei luo num1 ja num2 parametriin asetettua arvoa.).
 //Lähde: https://stackoverflow.com/a/27406449
 function generateRandom(min, max, num1, num2) {
   var rtn = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -57,6 +57,7 @@ function generateRandom(min, max, num1, num2) {
 let randomQ1value = generateRandom(1, 3)
 let randomQ1value2 = generateRandom(1, 3);
 let correctQ1 = randomQ1value + randomQ1value2;
+//Estetään saman arvon tuottaminen useaan vaihtoehtoon käyttämällä num1 ja num2 parametrejä.
 let incorrect1Q1 = generateRandom(1, 10, correctQ1)
 let incorrect2Q1 = generateRandom(1, 10, correctQ1, incorrect1Q1);
 let OptionsQ1 = [correctQ1, incorrect1Q1, incorrect2Q1];
