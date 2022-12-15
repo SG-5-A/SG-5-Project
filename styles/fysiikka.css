@@ -1,0 +1,38 @@
+label
+{
+	font-size: large;
+}
+
+button
+{
+	margin: 0.5em;
+	font-weight: bold;
+	background-color: rgb(128,128,255);
+	color: rgb(255,255,0);
+	font-size: large;
+}
+
+.wrongAnswer
+{
+	color: rgb(255,0,0);
+	font-style: italic;
+}
+
+.rightAnswer
+{
+	color: rgb(0,128,0);
+	font-weight: bold;
+}
+
+.solution
+{
+	font-size: medium;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.questionInResults
+{
+	/*font-size: larger;*/
+	font-weight: bold;
+}
