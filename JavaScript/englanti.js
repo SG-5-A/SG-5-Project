@@ -1,4 +1,5 @@
-
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
 // Tervetuloa/ohjeistus tekstin poistaminen näkyvistä "Aloita" painiketta painamalla
 let start = document.getElementById("start");
@@ -77,3 +78,4 @@ function openHardQuiz(event) {
     easyQuiz.classList.remove("visible");
     mediumQuiz.classList.remove("visible");
 }
+
