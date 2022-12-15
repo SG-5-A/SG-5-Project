@@ -8,3 +8,13 @@
 {
 	width: 100%;
 }
+
+.wrongAnswer
+{
+	color: red;
+}
+
+.rightAnswer
+{
+	color: green;
+}
