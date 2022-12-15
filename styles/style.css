@@ -69,3 +69,11 @@ body {
         margin-top: 145px;
         margin-bottom: 130px;
     }
+
+    .carousel-control-prev-icon {
+        display: none;
+    }
+
+    .carousel-control-next-icon {
+        display: none;
+    }

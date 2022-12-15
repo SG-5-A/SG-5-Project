@@ -1,5 +1,13 @@
 .navbar {
     background-color: #5E7D7B;
+    
+}
+.nav-link {
+    color: rgb(200, 196, 196)
+}
+
+.navbar-brand {
+    color: rgb(200, 196, 196)
 }
 
 #navbar{
@@ -11,12 +19,19 @@
 }
 .accordion-body {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    flex-wrap: wrap;
+    align-items: center;
+    
 }
 
+span {
+    margin-top: 20px;
+    display: flex;
+}
+
+input {
+    margin-right: 5px;  
+}
 
 .accordion-item {
     min-height: 278px;
@@ -26,10 +41,6 @@
 .accordion-header {
     background-color: #5E7D7B;
 }
-
-/*input {
-    margin-left: 150px;
-}*/
 
 form {
     width: 100%;
@@ -85,4 +96,14 @@ form {
 #start {
     margin: 5px 0px 0px 15px;
     width: 80px;
+}
+
+#ready {
+    margin-top: 15px;
+    width: 150px;
+}
+
+.custom-popover {
+    height: 200px;
+    width: fit-content;
 }
