@@ -67,7 +67,7 @@ function OnNextButton(event)
 				curAns += 1;
 				if(radioButton.checked)
 				{
-					questionOneAnswer.innerText = "1. " + radioButton.value;
+					questionOneAnswer.innerText = radioButton.value;
 					if(curAns != correctAnswers[0])
 					{
 						questionOneSolution.hidden = false;
@@ -89,7 +89,7 @@ function OnNextButton(event)
 				curAns += 1;
 				if(radioButton.checked)
 				{
-					questionTwoAnswer.innerText = "2. " + radioButton.value;
+					questionTwoAnswer.innerText = radioButton.value;
 					if(curAns != correctAnswers[1])
 					{
 						questionTwoSolution.hidden = false;
@@ -111,7 +111,7 @@ function OnNextButton(event)
 				curAns += 1;
 				if(radioButton.checked)
 				{
-					questionThreeAnswer.innerText = "3. " + radioButton.value;
+					questionThreeAnswer.innerText = radioButton.value;
 					if(curAns != correctAnswers[2])
 					{
 						questionThreeSolution.hidden = false;
@@ -133,7 +133,7 @@ function OnNextButton(event)
 				curAns += 1;
 				if(radioButton.checked)
 				{
-					questionFourAnswer.innerText = "4. " + radioButton.value;
+					questionFourAnswer.innerText = radioButton.value;
 					if(curAns != correctAnswers[3])
 					{
 						questionFourSolution.hidden = false;
@@ -155,7 +155,7 @@ function OnNextButton(event)
 				curAns += 1;
 				if(radioButton.checked)
 				{
-					questionFiveAnswer.innerText = "5. " + radioButton.value;
+					questionFiveAnswer.innerText = radioButton.value;
 					if(curAns != correctAnswers[4])
 					{
 						questionFiveSolution.hidden = false;
