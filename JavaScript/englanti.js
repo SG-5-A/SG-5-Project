@@ -79,3 +79,54 @@ function openHardQuiz(event) {
     mediumQuiz.classList.remove("visible");
 }
 
+// Vastausten tallennus
+
+let answersArray = [];
+
+const FORK = document.getElementById("fork");
+const BUSH = document.getElementById("bush");
+const SWEETLAND = document.getElementById("sweetland");
+
+// Form helppo
+let easyForm = document.getElementById("easyQuiz");
+
+// Valmis painike
+let easyReady = document.getElementById("ready")
+
+// Container jonne tulos tulee
+let resultContainer = document.querySelector(".card-text");
+
+
+easyForm.addEventListener("submit", calculatePoints);
+
+//easyResult.addEventListener("click", showResult);
+
+/**
+ * @param {Event} event 
+ */
+ 
+function calculatePoints(event) {
+    event.preventDefault();
+    let fData = new FormData(easyForm);
+    
+    let answer = fData.get("answer");
+
+    if (answer == FORK ) {
+        answersArray.push(fData);
+    }
+alert(answersArray);
+}
+
+/**
+ * @param {Event} event 
+ */
+function showResult (event) {
+     let clickedResult = event.currentTarget
+     easyResult = clickedResult;
+    resultContainer.classList.add("visible");
+}
+
+
+
+
+
