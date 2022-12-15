@@ -54,10 +54,10 @@
 </nav>
 
 <center>
-	<div class="initialState">
+	<div id="initialState">
 		<h2>Fysiikka visa</h2>
 	</div>
-	<div class="questionOne" hidden>
+	<div id="questionOne" hidden>
 		<h3 class="text">Kysymys 1/5</h3>
 		<input type="radio" name="q1" id="q1a1" value="First Option">
 		<label for="q1a1">First Option</label>
@@ -71,7 +71,7 @@
 		<input type="radio" name="q1" id="q1a4" value="Fourth Option">
 		<label for="q1a4">Fourth Option</label>
 	</div>
-	<div class="questionTwo" hidden>
+	<div id="questionTwo" hidden>
 		<h3>Kysymys 2/5</h3>
 		<input type="radio" name="q2" id="q2a1" value="First Option">
 		<label for="q2a1">First Option</label>
@@ -85,7 +85,7 @@
 		<input type="radio" name="q2" id="q2a4" value="Fourth Option">
 		<label for="q2a4">Fourth Option</label>
 	</div>
-	<div class="questionThree" hidden>
+	<div id="questionThree" hidden>
 		<h3>Kysymys 3/5</h3>
 		<input type="radio" name="q3" id="q3a1" value="First Option">
 		<label for="q3a1">First Option</label>
@@ -99,7 +99,7 @@
 		<input type="radio" name="q3" id="q3a4" value="Fourth Option">
 		<label for="q3a4">Fourth Option</label>
 	</div>
-	<div class="questionFour" hidden>
+	<div id="questionFour" hidden>
 		<h3>Kysymys 4/5</h3>
 		<input type="radio" name="q4" id="q4a1" value="First Option">
 		<label for="q4a1">First Option</label>
@@ -113,7 +113,7 @@
 		<input type="radio" name="q4" id="q4a4" value="Fourth Option">
 		<label for="q4a4">Fourth Option</label>
 	</div>
-	<div class="questionFive" hidden>
+	<div id="questionFive" hidden>
 		<h3>Kysymys 5/5</h3>
 		<input type="radio" name="q5" id="q5a1" value="First Option">
 		<label for="q5a1">First Option</label>
@@ -130,15 +130,15 @@
 	<div class="endState" hidden>
 		<h3 id="score">Pisteet: x/5</h3>
 		<h5 id="questionOneAnswer"></h5>
-		<h5 class="questionOneSolution" hidden>Kysymys 1 oikea vastaus tähän!</h5>
+		<h5 class="solution" id="questionOneSolution" hidden>Kysymys 1 oikea vastaus tähän!</h5>
 		<h5 id="questionTwoAnswer"></h5>
-		<h5 class="questionTwoSolution" hidden>Kysymys 2 oikea vastaus tähän!</h5>
+		<h5 class="solution" id="questionTwoSolution" hidden>Kysymys 2 oikea vastaus tähän!</h5>
 		<h5 id="questionThreeAnswer"></h5>
-		<h5 class="questionThreeSolution" hidden>Kysymys 3 oikea vastaus tähän!</h5>
+		<h5 class="solution" id="questionThreeSolution" hidden>Kysymys 3 oikea vastaus tähän!</h5>
 		<h5 id="questionFourAnswer"></h5>
-		<h5 class="questionFourSolution" hidden>Kysymys 4 oikea vastaus tähän!</h5>
+		<h5 class="solution" id="questionFourSolution" hidden>Kysymys 4 oikea vastaus tähän!</h5>
 		<h5 id="questionFiveAnswer"></h5>
-		<h5 class="questionFiveSolution" hidden>Kysymys 5 oikea vastaus tähän!</h5>
+		<h5 class="solution" id="questionFiveSolution" hidden>Kysymys 5 oikea vastaus tähän!</h5>
 	</div>
 	<button class="nextButton" id="nextButton">Aloita</button>
 </center>

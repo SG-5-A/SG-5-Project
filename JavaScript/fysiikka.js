@@ -1,12 +1,12 @@
 
-let initialPortion = document.querySelector(".initialState");
-let questionOnePortion = document.querySelector(".questionOne");
-let questionTwoPortion = document.querySelector(".questionTwo");
-let questionThreePortion = document.querySelector(".questionThree");
-let questionFourPortion = document.querySelector(".questionFour");
-let questionFivePortion = document.querySelector(".questionFive");
-let finalPortion = document.querySelector(".endState");
-let nextButton = document.querySelector(".nextButton");
+let initialPortion = document.getElementById("initialState");
+let questionOnePortion = document.getElementById("questionOne");
+let questionTwoPortion = document.getElementById("questionTwo");
+let questionThreePortion = document.getElementById("questionThree");
+let questionFourPortion = document.getElementById("questionFour");
+let questionFivePortion = document.getElementById("questionFive");
+let finalPortion = document.getElementById("endState");
+let nextButton = document.getElementById("nextButton");
 
 let questionOneAnswer = document.getElementById("questionOneAnswer");
 let questionTwoAnswer = document.getElementById("questionTwoAnswer");
@@ -14,11 +14,11 @@ let questionThreeAnswer = document.getElementById("questionThreeAnswer");
 let questionFourAnswer = document.getElementById("questionFourAnswer");
 let questionFiveAnswer = document.getElementById("questionFiveAnswer");
 
-let questionOneSolution = document.querySelector(".questionOneSolution");
-let questionTwoSolution = document.querySelector(".questionTwoSolution");
-let questionThreeSolution = document.querySelector(".questionThreeSolution");
-let questionFourSolution = document.querySelector(".questionFourSolution");
-let questionFiveSolution = document.querySelector(".questionFiveSolution");
+let questionOneSolution = document.getElementById("questionOneSolution");
+let questionTwoSolution = document.getElementById("questionTwoSolution");
+let questionThreeSolution = document.getElementById("questionThreeSolution");
+let questionFourSolution = document.getElementById("questionFourSolution");
+let questionFiveSolution = document.getElementById("questionFiveSolution");
 
 let scoreText = document.getElementById("score");
 
