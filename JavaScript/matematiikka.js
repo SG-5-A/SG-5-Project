@@ -1,11 +1,11 @@
-//Divien kutsu html:stä
+//Divien kutsu 
 let startdiv = document.querySelector(".startbox");
 let questionOnediv = document.querySelector(".questionOne");
 let questionTwodiv = document.querySelector(".questionTwo");
 let questionThreediv = document.querySelector(".questionThree")
 let questionFourdiv = document.querySelector(".questionFour")
 let questionFivediv = document.querySelector(".questionFive")
-
+let ResultsDiv = document.getElementById("resultsdiv");
 //Painikkeet
 let startbutton = document.querySelector(".startbutton");
 let buttonToQ2 = document.querySelector(".q1next");
@@ -14,13 +14,13 @@ let buttontoQ4 = document.querySelector(".q3next")
 let buttontoQ5 = document.querySelector(".q4next")
 let finishbutton = document.querySelector(".finish")
 
-//funktiolla palauttaa labelin, classilla ".q" + kysymyksen numero + "label" + vaihtoehdon kirjain;
+//funktio palauttaa html:stä labelin, classilla ".q" + kysymyksen numero + "label" + vaihtoehdon kirjain.
 function label(number, letter){
  let name = ".q" + number + "label" + letter;
  let element = document.querySelector(name);
  return element;
 }
-//funktiolla palauttaa inputin, classilla ".q" + numero + "label" + kirjain;
+//funktio palauttaa inputin, classilla ".q" + numero + "label" + kirjain.
 function radio(number, letter){
   let name = ".q" + number + "option" + letter;
   let element = document.querySelector(name);
@@ -35,7 +35,7 @@ let span = document.createElement("span");
     //Vastausten tallentaminen, (kesken)
     let answers = [];
 
-// Funktio asettaa vastaus vaihtoehdot satunnaiseen järjestykseen
+// Funktio asettaa vastaus vaihtoehdot satunnaiseen järjestykseen ja asettaa tekstikenttään kysymyksen.
 function assignOptions(nextButton, Options, labelA, labelB, labelC, p, question) {
   nextButton.addEventListener("click", () =>{
 
@@ -47,7 +47,7 @@ function assignOptions(nextButton, Options, labelA, labelB, labelC, p, question)
   p.innerHTML = question;
 });
 }
-//Luo satunnaisen luvun tietyltä väliltä. Ei luo num1 ja num2 parametriin asetettua arvoa.).
+//Luo satunnaisen luvun tietyltä väliltä. Ei luo num1 ja num2 parametriin asetettua arvoa.
 //Lähde: https://stackoverflow.com/a/27406449
 function generateRandom(min, max, num1, num2) {
   var rtn = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -94,7 +94,6 @@ function style_correct(lockButton, nextButton, textp){
 }
 function style_incorrect(lockButton, nextButton, textp, expl){
   lockButton.style.display = "none";
-  points = points + 2;
   span.innerHTML = "Pisteet: "+points;
   nextButton.style.display = "block";
   textp.innerHTML = expl;
@@ -114,6 +113,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionB.disabled = true;
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
+      answers.push([labelA.innerHTML, " Oikein" + "<br>"]);
     }//Jos väärin 
     if(labelA.innerHTML == incorrect1 || labelA.innerHTML == incorrect2){
       console.log("incorrect");
@@ -121,6 +121,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionB.disabled = true;
       optionC.disabled = true;
       style_incorrect(lockbutton, nextbutton, p, explanation);
+      answers.push([labelA.innerHTML, " Väärin" + "<br>" + "Oikea vastaus oli " + correct]);
     }
   }   if (optionB.checked) {
     if (labelB.innerHTML == correct) {
@@ -129,6 +130,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
+      answers.push([labelB.innerHTML, " Oikein" + "<br>"]);
     }
     if(labelB.innerHTML == incorrect1 || labelB.innerHTML == incorrect2){
       console.log("incorrect");
@@ -136,6 +138,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionC.disabled = true;
       style_incorrect(lockbutton, nextbutton, p, explanation);
+      answers.push([labelB.innerHTML, " Väärin" + "<br>" + "Oikea vastaus oli " + correct]);
     }
   }   if (optionC.checked) {
     if (labelC.innerHTML == correct) {
@@ -144,6 +147,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionB.disabled = true;
       style_correct(lockbutton, nextbutton, p);
+      answers.push([labelC.innerHTML, " Oikein" + "<br>"]);
     }
     if(labelC.innerHTML == incorrect1 || labelC.innerHTML == incorrect2){
       console.log("incorrect");
@@ -151,13 +155,14 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionB.disabled = true;
       style_incorrect(lockbutton, nextbutton, p, explanation);
+      answers.push([labelC.innerHTML, " Väärin" + "<br>" + "Oikea vastaus oli " + correct]);
     }
   } 
 })
 }
 //Kysymyksen 1 vastauksen tarkistus.
 let lockq1 = document.querySelector(".lockq1");
-let explanation1 = "Vastauksesi on väärin. " + randomQ1value + " " + "+" + " " + randomQ1value2 + " on " + correctQ1 + ".";
+let explanation1 = "Vastauksesi on väärin. " + randomQ1value +  " + "  + randomQ1value2 + " on " + correctQ1 + ".";
 let answerone = document.querySelector(".answerone");
 
 check_answer(lockq1, buttonToQ2, radio(1, "a"), radio(1, "b"), radio(1, "c"), label(1, "a"), label(1, "b"), label(1, "c"), correctQ1,
@@ -171,7 +176,7 @@ let incorrect1Q2 = generateRandom(1, 50, correctQ2)
 let incorrect2Q2 = generateRandom(1, 50, correctQ2, incorrect1Q2);
 let OptionsQ2 = [correctQ2, incorrect1Q2, incorrect2Q2];
 let hques2 = document.querySelector(".hques2");
-let question_two = "Kuinka paljon on lukujen " + randomQ2value + " " + "ja" + " " + randomQ2value2 + " erotus" + " ?";
+let question_two = "Kuinka paljon on lukujen " + randomQ2value + " ja " + randomQ2value2 + " erotus?";
 
 //sekoittaa taas vaihtoehdot 
 assignOptions( buttonToQ2, OptionsQ2,  label(2, "a"), label(2, "b"), label(2, "c"), hques2, question_two);
@@ -215,7 +220,7 @@ let incorrect1Q3 = generateRandom(1, 16, correctQ3)
 let incorrect2Q3 = generateRandom(1, 16, correctQ3, incorrect1Q3);
 let OptionsQ3 = [correctQ3, incorrect1Q3, incorrect2Q3];
 let hques3 = document.querySelector(".hques3");
-let question_three = "Paljonko on luku " + randomQ3value + " " + "jaettuna luvulla" + " " + randomQ3value2 + " ?";
+let question_three = "Paljonko on luku " + randomQ3value + " jaettuna luvulla " + randomQ3value2 + " ?";
 
 assignOptions( buttontoQ3, OptionsQ3,label(3, "a"), label(3, "b"), label(3, "c"), hques3, question_three);
 
@@ -245,7 +250,7 @@ check_answer(lockq3, buttontoQ4,  radio(3, "a"), radio(3, "b"), radio(3, "c"), l
   let incorrect2Q4 = generateRandom(1, 96, correctQ4, incorrect1Q4) + "cm";
   let OptionsQ4 = [correctQ4, incorrect1Q4, incorrect2Q4];
   let hques4 = document.querySelector(".hques4");
-  let question_four = "Mikä on suorakulmion pinta-ala jonka leveys on " + randomQ4value + " cm" + " ja " + "korkeus " + randomQ4value2 + "cm" + " ?";
+  let question_four = "Mikä on suorakulmion pinta-ala jonka leveys on " + randomQ4value + " ja korkeus " + randomQ4value2 + " ?";
   
   assignOptions( buttontoQ4, OptionsQ4, label(4, "a"), label(4, "b"), label(4, "c"), hques4, question_four);
 
@@ -263,7 +268,7 @@ function StartQuestion4(){
 //Vastauksen tarkistaminen kysymykseen 4
 let lockq4 = document.querySelector(".lockq4");
 let answerfour = document.querySelector(".answerfour")
-let explanation4 = "Vastauksesi on väärin. Oikea vastaus on " + correctQ4 + "cm.";
+let explanation4 = "Vastauksesi on väärin. Oikea vastaus on " + correctQ4 + ".";
 
 check_answer(lockq4, buttontoQ5,  radio(4, "a"), radio(4, "b"), radio(4, "c"), label(4, "a"), label(4, "b"), label(4, "c"), 
   correctQ4, incorrect1Q4, incorrect2Q4, answerfour, explanation4);
@@ -299,3 +304,19 @@ let explanation5 = "Vastauksesi on väärin. Oikea vastaus on " + correctQ5 + ".
 check_answer(lockq5, finishbutton,  radio(5, "a"), radio(5, "b"), radio(5, "c"), label(5, "a"), label(5, "b"), label(5, "c"), 
 correctQ5, incorrect1Q5, incorrect2Q5, answerfive, explanation5);
 
+function ShowResult(){
+  let results = document.querySelector(".results");
+  results.innerHTML = "<li>" + "K1. Vastauksesi: " + answers[0] + "</li>" + "<li>" +"K2. Vastauksesi: "
+   +  answers[1] + "</li>" + "<li>" +"K3. Vastauksesi: " +  answers[2] + "</li>" + "<li>" + "K4. Vastauksesi: " +  answers[3] + "</li>" + 
+   "<li>" + "K5. Vastauksesi: " + answers[4] + "</li>";
+}
+finishbutton.addEventListener("click", FinishQuiz);
+
+function FinishQuiz(){
+
+questionFivediv.style.display = "none";
+ResultsDiv.classList.add("resultsdivstyle");
+ShowResult();
+ResultsDiv.style.display = "flex";
+
+}
