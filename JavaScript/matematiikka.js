@@ -269,14 +269,14 @@ check_answer(lockq4, buttontoQ5,  radio(4, "a"), radio(4, "b"), radio(4, "c"), l
   correctQ4, incorrect1Q4, incorrect2Q4, answerfour, explanation4);
 
 // Kysymys 5 vastaukset
-let randomQ5value = generateRandom(1, 4, 2, 3);
-let randomQ5value2 = generateRandom(0, 4);
+let randomQ5value = generateRandom(0, 4, 2, 3);
+let randomQ5value2 = generateRandom(1, 6);
 let correctQ5 = Math.sqrt(randomQ5value) + Math.pow(randomQ5value2, 2);
-let incorrect1Q5 = generateRandom(1, 18, correctQ5);
-let incorrect2Q5 = generateRandom(1, 18, correctQ5, incorrect1Q5);
+let incorrect1Q5 = generateRandom(1, 38, correctQ5);
+let incorrect2Q5 = generateRandom(1, 38, correctQ5, incorrect1Q5);
 let OptionsQ5 = [correctQ5, incorrect1Q5, incorrect2Q5];
 let hques5 = document.querySelector(".hques5");
-let question_five = "Kuinka paljon on " + "&radic;" + randomQ5value + " + " + randomQ5value2 + " potenssiin " + 2 + " ?";
+let question_five = "Kuinka paljon on luvun " + "&radic;" + randomQ5value + " ja luvun " + randomQ5value2 + " potenssiin " + 2 + " summa ?";
 
 assignOptions( buttontoQ5, OptionsQ5, label(5, "a"), label(5, "b"), label(5, "c"), hques5, question_five);
 
