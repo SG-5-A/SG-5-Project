@@ -55,16 +55,17 @@
       </nav>
       <!--nav end-->
       <!--info box-->
-      <div class="container text-center">
+      <div id="textContainer" class="container text-center">
         <div class="row">
           <div class="col">
             <b>Tervetuloa Maantieto visaan!</b><br>
-            <p>Tässä visassa tulet vastaamaan maantieto kysymyksiin. <br>
-            Jokaisessa kysymyksessä on 3 vaihtoehtoa valitse näistä yksi. </p>
+            <p>Tässä visassa tulet vastaamaan  viiteen maantieto kysymykseen. <br>
+            Jokaisessa kysymyksessä on kolme  vastaus vaihtoehtoa valitse näistä yksi. </p> 
           </div>
         </div>
       </div>
       <!--info box end-->
+     
       <!--accordion start-->
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -118,10 +119,69 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Mikä on suomen korkein tunturi?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name=""> Halti</label>
+              <input type="radio" name="quest4" value=""><br>
+              <label for="">Ridnitsohkka</label>
+              <input type="radio" name="quest4" value=""><br>
+              <label for="">Kiedditsohkka</label>
+              <input type="radio" name="quest4" value="">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Missä maakunnassa Tampere sijaitsee?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name=""> 	Etelä-Savo</label>
+              <input type="radio" name="quest5" value=""><br>
+              <label for="">	Pirkanmaa</label>
+              <input type="radio" name="quest5" value=""><br>
+              <label for="">Varsinais-Suomi</label>
+              <input type="radio" name="quest5" value="">
+            </div>
+          </div>
+        </div>
               
       </div>
       <!--accordion end-->
-      <button onclick="onClick()" id="next">Seuraava</button>
+      <!--start button-->
+      <div id="startButton">
+      <p>Klikkaa aloittaaksesi visa!</p>
+      <button  id="next">Aloita!</button>
+      </div>
+      <!--start button end-->
+      <!--result button-->
+      <div id="resultButton"> 
+
+      <button id="resultB" >Tulokset</button>
+      </div>
+
+
+
+
+      <!--ressults-->
+      <div id="resultDiv">
+        <p>alla näet miten visa meni: <br>
+        1 = Hylätty <br>
+        2 = Kohtalainen <br>
+        3 = Tyydyttävä <br>
+        4 = Hyvä <br>
+        5 = Erinomainen</p> <br>
+        <p>Pistemäärä =</p>
+
+      </div>
 
       
     
