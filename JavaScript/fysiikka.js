@@ -26,7 +26,6 @@ let currentQuestion = 0;
 let score = 0;
 let correctAnswers = [4,2,3,1,4];
 
-document.getElementById("startButton").addEventListener("click", OnNextButton);
 document.getElementById("nextButton").addEventListener("click", OnNextButton);
 
 function OnNextButton(event)
@@ -37,7 +36,7 @@ function OnNextButton(event)
 		case 0:
 			initialPortion.hidden = true;
 			questionOnePortion.hidden = false;
-			nextButton.hidden = false;
+			nextButton.innerText = "Seuraava";
 			break;
 		case 1:
 			questionOnePortion.hidden = true;
@@ -58,7 +57,7 @@ function OnNextButton(event)
 		case 5:
 			questionFivePortion.hidden = true;
 			finalPortion.hidden = false;
-			nextButton.hidden = true;
+			nextButton.innerText = "Uudestaan";
 			
 			let curAns = 0;
 			
@@ -174,7 +173,9 @@ function OnNextButton(event)
 			scoreText.innerText = "Pisteet: " + score + "/5";
 			
 			break;
-			
+		case 6:
+			location.reload();
+			break;
 	}
 	currentQuestion += 1;
 }
