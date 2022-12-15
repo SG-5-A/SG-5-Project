@@ -14,7 +14,7 @@ resultB.addEventListener("click", openResults)
  * @param {Event} event
  */
  
-
+//aloitus sivu
 function openaccordion1(event){
 
     //let clickedbutton = event.currentTarget;
@@ -28,6 +28,7 @@ function openaccordion1(event){
 /**
  * @param {event} event
  */
+//result sivu
 function openResults(event){
     accordion1.classList.remove("visible");
     resultButton.classList.remove("visible");
