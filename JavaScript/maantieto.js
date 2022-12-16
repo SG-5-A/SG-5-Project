@@ -37,3 +37,56 @@ function openResults(event){
 
 
 }
+
+//queryselectorin radioille oikeille vastauksille
+let right1 = document.querySelector(".firstRight");
+let right2 = document.querySelector(".secondRight");
+let right3 = document.querySelector(".thirdRight");
+let right4 = document.querySelector(".forthRight");
+let right5 = document.querySelector(".fifthRight");
+
+
+
+//tulos innerhtml/print
+let tulos = document.getElementById("tulos");
+let tulos2 = document.getElementById("tulos2");
+let tulos3 = document.getElementById("tulos3");
+let tulos4 = document.getElementById("tulos4");
+let tulos5 = document.getElementById("tulos5");
+
+
+// eventlistenerit
+right1.addEventListener("click",testi)
+right2.addEventListener("click",testi2)
+right3.addEventListener("click",testi3)
+right4.addEventListener("click",testi4)
+right5.addEventListener("click",testi5)
+
+//functionit
+function testi(){
+    if(right1.checked){
+        tulos.innerHTML="oikein!"
+    }
+}
+function testi2(){
+    if(right1.checked){
+        tulos2.innerHTML="oikein!"
+    }
+}
+function testi3(){
+    if(right1.checked){
+        tulos3.innerHTML="oikein!"
+    }
+}
+function testi4(){
+    if(right1.checked){
+        tulos4.innerHTML="oikein!"
+    }
+}
+function testi5(){
+    if(right1.checked){
+        tulos5.innerHTML="oikein!"
+    }
+}
+
+    

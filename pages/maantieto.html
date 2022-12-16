@@ -77,11 +77,11 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name="">Oulu</label>
-              <input type="radio" name="quest" value=""><br>
+              <input class="firstWrong" type="radio" name="quest" value=""><br>
               <label for="">Tampere</label>
-              <input type="radio" name="quest" value=""><br>
+              <input class="firstWrong" type="radio" name="quest" value=""><br>
               <label for="">Helsinki</label>
-              <input type="radio" name="quest" value="">
+              <input class="firstRight" type="radio" name="quest" value="">
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
               <label for="" name="">Intia</label>
               <input type="radio" name="quest2" value=""><br>
               <label for="">Kiina</label>
-              <input type="radio" name="quest2" value=""><br>
+              <input class="secondRight" type="radio" name="quest2" value=""><br>
               <label for="">Yhdysvallat</label>
               <input type="radio" name="quest2" value="">
             </div>
@@ -115,7 +115,7 @@
               <label for="">Mustameri</label>
               <input type="radio" name="quest3" value=""><br>
               <label for="">Tyynimeri</label>
-              <input type="radio" name="quest3" value="">
+              <input class="thirdRight" type="radio" name="quest3" value="">
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name=""> Halti</label>
-              <input type="radio" name="quest4" value=""><br>
+              <input class="forthRight" type="radio" name="quest4" value=""><br>
               <label for="">Ridnitsohkka</label>
               <input type="radio" name="quest4" value=""><br>
               <label for="">Kiedditsohkka</label>
@@ -147,7 +147,7 @@
               <label for="" name=""> 	Etelä-Savo</label>
               <input type="radio" name="quest5" value=""><br>
               <label for="">	Pirkanmaa</label>
-              <input type="radio" name="quest5" value=""><br>
+              <input class="fifthRight" type="radio" name="quest5" value=""><br>
               <label for="">Varsinais-Suomi</label>
               <input type="radio" name="quest5" value="">
             </div>
@@ -180,8 +180,18 @@
         4 = Hyvä <br>
         5 = Erinomainen</p> <br>
         <p>Pistemäärä =</p>
-
+          <div>
+            <ul>
+              <li><p id="tulos"></p></li>
+              <li><p id="tulos2"></p></li>
+              <li><p id="tulos3"></p></li>
+              <li><p id="tulos4"></p></li>
+              <li><p id="tulos5"></p></li>
+             
+            </ul>
+          </div>
       </div>
+
 
       
     
