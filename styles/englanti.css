@@ -1,3 +1,6 @@
+.accordion {
+    position: relative;
+}
 .navbar {
     background-color: #5E7D7B;
     
@@ -103,7 +106,17 @@ form {
     width: 150px;
 }
 
-.custom-popover {
-    height: 200px;
-    width: fit-content;
+.card {
+    display: none;
 }
+
+.card.visible{  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    height: fit-content;
+}
+
+
+
