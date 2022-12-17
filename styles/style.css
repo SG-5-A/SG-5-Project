@@ -52,18 +52,15 @@ body {
         
     }
 
-
     /*carousel button*/
-
     .carousel-control-next{
         margin-right: 380px;
         margin-top: 145px;
         margin-bottom: 130px;
         
     }
-
+    
     /*carousel prev slide*/
-
     .carousel-control-prev{
         margin-left: 380px;
         margin-top: 145px;
