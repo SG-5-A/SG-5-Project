@@ -97,15 +97,21 @@ let easyReady = document.getElementById("ready")
 let resultContainer = document.querySelector(".card-text");
 
 
-easyForm.addEventListener("submit", calculatePoints);
+//easyForm.addEventListener("submit", calculatePoints);
 
 //easyResult.addEventListener("click", showResult);
+
+easyForm.onsubmit = function(e) {
+    e.preventDefault()
+    const ANSWERS = ['animal', 'answer2', 'answer3'].map(name => [name].value);
+    alert(ANSWERS);
+}
 
 /**
  * @param {Event} event 
  */
  
-function calculatePoints(event) {
+/*function calculatePoints(event) {
     event.preventDefault();
     let fData = new FormData(easyForm);
     
@@ -116,15 +122,17 @@ function calculatePoints(event) {
     }
 alert(answersArray);
 }
+*/
 
 /**
  * @param {Event} event 
- */
+
 function showResult (event) {
      let clickedResult = event.currentTarget
      easyResult = clickedResult;
     resultContainer.classList.add("visible");
 }
+ */
 
 
 
