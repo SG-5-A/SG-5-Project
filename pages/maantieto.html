@@ -77,11 +77,11 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name="">Oulu</label>
-              <input class="firstWrong" type="radio" name="quest" value=""><br>
+              <input id="rd1" type="radio" name="quest" value=""><br>
               <label for="">Tampere</label>
-              <input class="firstWrong" type="radio" name="quest" value=""><br>
+              <input id="rd2" type="radio" name="quest" value=""><br>
               <label for="">Helsinki</label>
-              <input class="firstRight" type="radio" name="quest" value="">
+              <input id="rd3" type="radio" name="quest" value="">
             </div>
           </div>
         </div>
@@ -94,11 +94,11 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name="">Intia</label>
-              <input type="radio" name="quest2" value=""><br>
+              <input id="rd4" type="radio" name="quest2" value=""><br>
               <label for="">Kiina</label>
-              <input class="secondRight" type="radio" name="quest2" value=""><br>
+              <input id="rd5" type="radio" name="quest2" value=""><br>
               <label for="">Yhdysvallat</label>
-              <input type="radio" name="quest2" value="">
+              <input id="rd6" type="radio" name="quest2" value="">
             </div>
           </div>
         </div>
@@ -111,11 +111,11 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name=""> Itämeri</label>
-              <input type="radio" name="quest3" value=""><br>
+              <input id="rd7" type="radio" name="quest3" value=""><br>
               <label for="">Mustameri</label>
-              <input type="radio" name="quest3" value=""><br>
+              <input id="rd8" type="radio" name="quest3" value=""><br>
               <label for="">Tyynimeri</label>
-              <input class="thirdRight" type="radio" name="quest3" value="">
+              <input id="rd9" type="radio" name="quest3" value="">
             </div>
           </div>
         </div>
@@ -128,11 +128,11 @@
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name=""> Halti</label>
-              <input class="forthRight" type="radio" name="quest4" value=""><br>
+              <input id="rd10" type="radio" name="quest4" value=""><br>
               <label for="">Ridnitsohkka</label>
-              <input type="radio" name="quest4" value=""><br>
+              <input id="rd11" type="radio" name="quest4" value=""><br>
               <label for="">Kiedditsohkka</label>
-              <input type="radio" name="quest4" value="">
+              <input id="rd12" type="radio" name="quest4" value="">
             </div>
           </div>
         </div>
@@ -145,11 +145,11 @@
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <label for="" name=""> 	Etelä-Savo</label>
-              <input type="radio" name="quest5" value=""><br>
+              <input id="rd13" type="radio" name="quest5" value=""><br>
               <label for="">	Pirkanmaa</label>
-              <input class="fifthRight" type="radio" name="quest5" value=""><br>
+              <input id="rd14" type="radio" name="quest5" value=""><br>
               <label for="">Varsinais-Suomi</label>
-              <input type="radio" name="quest5" value="">
+              <input id="rd15" type="radio" name="quest5" value="">
             </div>
           </div>
         </div>
@@ -167,19 +167,20 @@
 
       <button id="resultB" >Tulokset</button>
       </div>
-
+      
 
 
 
       <!--ressults-->
       <div id="resultDiv">
-        <p>alla näet miten visa meni: <br>
+        
+        <p>alla näet miten visa meni(huom jos jätit vastaamatta visa ei näytä tulosta): <br>
         1 = Hylätty <br>
         2 = Kohtalainen <br>
         3 = Tyydyttävä <br>
         4 = Hyvä <br>
         5 = Erinomainen</p> <br>
-        <p>Pistemäärä =</p>
+        <p id="scoreBoard"></p>
           <div>
             <ul>
               <li><p id="tulos"></p></li>
@@ -187,9 +188,18 @@
               <li><p id="tulos3"></p></li>
               <li><p id="tulos4"></p></li>
               <li><p id="tulos5"></p></li>
-             
+            
             </ul>
+            
+            <div id="refreshPage">
+              <button onClick="history.go(0);">Yritä uudelleen</button>
+      
+      
+            </div>
           </div>
+          <!--refresh page-->
+          
+          
       </div>
 
 
