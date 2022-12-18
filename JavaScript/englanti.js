@@ -13,11 +13,6 @@ function closeIntroduction (e) {
     easyQuiz.classList.add("visible");
     WELCOME.remove("visible");
 
-    /*if (WELCOME.style.visibility === 'hidden') {
-        WELCOME.style.visibility = 'visible';
-    } else {
-        WELCOME.style.visibility = 'hidden';
-    } */
 }
 
 // VISOJEN NÄKYVYYS
@@ -168,24 +163,108 @@ let resultContainer = document.querySelector(".card-text");
 }
 
 // Valmis painike
-let easyReady = document.getElementById("ready");
-
-//listItemOne.textContent = "Ladidaa";
+let readyButton = document.getElementById("ready").addEventListener("click", showResult);
 
 //Tuloskortti
 let resultCard = document.querySelector(".card");
-easyReady.addEventListener("click", showResult);
 
 /**
  * @param {Event} event 
 */
 function showResult (event) {
      let clickedResult = event.currentTarget
-     easyReady = clickedResult;
+     readyButton = clickedResult;
     resultCard.classList.add("visible");
 }
 
 
+// --------------------------------- Hard visa ----------
+
+let hardForm = document.getElementById("hardQuiz");
 
 
+hardForm.addEventListener("submit", calculatePoints);
 
+/**
+ * @param {Event} event
+ */
+
+function calculatePoints(event) {
+    event.preventDefault();
+
+    let fData = new FormData(hardForm);
+    answer1 = fData.get("animal");
+
+    answer2 = fData.get("vehicle");
+
+    answer3 = fData.get("country");
+
+    answer4 = fData.get("")
+
+    answer5 = fData.get("")
+    
+    answersArray.push(answer1);
+    answersArray.push(answer2);
+    answersArray.push(answer3);
+
+
+    
+
+    
+
+// Lista jonne tulee mikä vastaus ollut oikein ja mikä väärin
+let listItemOne = document.getElementById("listItemOne");
+let listItemTwo = document.getElementById("listItemTwo");
+let listItemThree = document.getElementById("listItemThree");
+let listItemFour = document.getElementById("listItemFour")
+let listItemFive = document.getElementById("listItemFive")
+
+    if(answersArray.includes("Fork")){
+        listItemOne.textContent = "Oikein";
+        rightAnswers.push(answer1);
+    } else {
+        listItemOne.textContent = "Väärin";
+    }
+
+    if(answersArray.includes("Bush")){
+        listItemTwo.textContent = "Oikein";
+        rightAnswers.push(answer2);
+    } else {
+        listItemTwo.textContent = "Väärin";
+    }
+
+    if(answersArray.includes("Sweetland")){
+        listItemThree.textContent = "Oikein";
+        rightAnswers.push(answer3);
+    } else {
+        listItemThree.textContent = "Väärin";
+    }
+// ----------------------------------------------
+// Pisteytys
+
+// Container jonne tulee tulos ja muuta tekstiä
+let resultContainer = document.querySelector(".card-text");
+
+    if(rightAnswers.length == 0){
+        resultContainer.textContent = "Voi ei, mönkään meni. Kokeile uudestaan painamalla nappia";
+    }else if(rightAnswers.length == 1){
+        resultContainer.textContent = "Hyvä! Sait yhden oikein, nappia painamalla voit kokeilla uudestaan.";
+    } else if(rightAnswers.length == 2){
+        resultContainer.textContent = "Hienoa! Sait kaksi oikein! Nappia painamalla voit kokeilla uudestaan.";
+    } else if(rightAnswers.length == 3){
+        resultContainer.textContent = "Loistavaa! Sait kaikki oikein! Pääset kokeilemaan vaikeampia kysymyksiä vaihtamalla luokkaa.";
+    }
+
+}
+
+let readyHardButton = document.getElementById("readyHard").addEventListener("click", showResult);
+
+
+/**
+ * @param {Event} event 
+*/
+function showResult (event) {
+    let clickedResult = event.currentTarget
+    readyHardButton = clickedResult;
+   resultCard.classList.add("visible");
+}
