@@ -28,11 +28,10 @@ function radio(number, letter){
  }
 //pisteet
 let points = 0;
-let span = document.createElement("span");
+let span = document.querySelector(".points");
     span.textContent = "Pisteet: " + points;
-    span.classList.add("pointsspan");
 
-    //Vastausten tallentaminen, (kesken)
+    //Tulosten tallentaminen tähän taulukkoon
     let answers = [];
 
 // Funktio asettaa vastaus vaihtoehdot satunnaiseen järjestykseen ja asettaa tekstikenttään kysymyksen.
@@ -79,8 +78,7 @@ function startquiz(){
     lockanswer1.classList.add("lockans");
     buttonToQ2.classList.add("qnext");
     questionOnediv.style.display = "grid"; 
-    let body = document.querySelector("body");
-    body.appendChild(span);
+    span.style.display = "block";
 }
 
 //Tein nämä, jottei tarvi monistaa joka kohtaan erikseen check_answer funktiossa
@@ -88,6 +86,9 @@ function style_correct(lockButton, nextButton, textp){
   lockButton.style.display = "none";
   points = points + 2;
   span.innerHTML = "Pisteet: "+points;
+  span.style.animationName = "correct-animation";
+  span.style.animationDuration = "1s";
+  span.style.animationIterationCount = "2";
   nextButton.style.display = "block";
   textp.innerHTML = "Vastauksesi on oikein :) !";
   textp.style.color = "green";
@@ -95,6 +96,9 @@ function style_correct(lockButton, nextButton, textp){
 function style_incorrect(lockButton, nextButton, textp, expl){
   lockButton.style.display = "none";
   span.innerHTML = "Pisteet: "+points;
+  span.style.animationName = "incorrect-animation";
+  span.style.animationDuration = "1s";
+  span.style.animationIterationCount = "2";
   nextButton.style.display = "block";
   textp.innerHTML = expl;
   textp.style.color = "red";
@@ -250,7 +254,7 @@ check_answer(lockq3, buttontoQ4,  radio(3, "a"), radio(3, "b"), radio(3, "c"), l
   let incorrect2Q4 = generateRandom(1, 96, correctQ4, incorrect1Q4) + "cm";
   let OptionsQ4 = [correctQ4, incorrect1Q4, incorrect2Q4];
   let hques4 = document.querySelector(".hques4");
-  let question_four = "Mikä on suorakulmion pinta-ala jonka leveys on " + randomQ4value + " ja korkeus " + randomQ4value2 + " ?";
+  let question_four = "Mikä on suorakulmion pinta-ala jonka leveys on " + randomQ4value + "cm ja korkeus " + randomQ4value2 + "cm ?";
   
   assignOptions( buttontoQ4, OptionsQ4, label(4, "a"), label(4, "b"), label(4, "c"), hques4, question_four);
 
@@ -306,17 +310,20 @@ correctQ5, incorrect1Q5, incorrect2Q5, answerfive, explanation5);
 
 function ShowResult(){
   let results = document.querySelector(".results");
-  results.innerHTML = "<li>" + "K1. Vastauksesi: " + answers[0] + "</li>" + "<li>" +"K2. Vastauksesi: "
-   +  answers[1] + "</li>" + "<li>" +"K3. Vastauksesi: " +  answers[2] + "</li>" + "<li>" + "K4. Vastauksesi: " +  answers[3] + "</li>" + 
-   "<li>" + "K5. Vastauksesi: " + answers[4] + "</li>";
+  results.innerHTML = "<li>" + "Kysymys 1. Vastauksesi: " + answers[0] + "</li>" + "<li>" +"Kysymys 2. Vastauksesi: "
+   +  answers[1] + "</li>" + "<li>" +"Kysymys 3. Vastauksesi: " +  answers[2] + "</li>" + "<li>" + "Kysymys 4. Vastauksesi: " +  answers[3] + "</li>" + 
+   "<li>" + "Kysymys 5. Vastauksesi: " + answers[4] + "</li>";
 }
+
 finishbutton.addEventListener("click", FinishQuiz);
+
 
 function FinishQuiz(){
 
 questionFivediv.style.display = "none";
 ResultsDiv.classList.add("resultsdivstyle");
+ResultsDiv.appendChild(span);
+span.style.setProperty("text-align", "center", "important");
 ShowResult();
-ResultsDiv.style.display = "flex";
-
+ResultsDiv.style.display = "grid";
 }
