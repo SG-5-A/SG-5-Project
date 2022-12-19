@@ -110,29 +110,29 @@ function testi(){
     
     if(correct1.checked){
 
-        tulos.innerHTML="oikein!" 
+        tulos.innerHTML="Oikein!" 
        
     }
 }
 function testi2(){
     if(correct2.checked){
-        tulos2.innerHTML="oikein!"
+        tulos2.innerHTML="Oikein!"
         
     }
 }
 function testi3(){
     if(correct3.checked){
-        tulos3.innerHTML="oikein!"
+        tulos3.innerHTML="Oikein!"
     }
 }
 function testi4(){
     if(correct4.checked){
-        tulos4.innerHTML="oikein!"
+        tulos4.innerHTML="Oikein!"
     }
 }
 function testi5(){
     if(correct5.checked){
-        tulos5.innerHTML="oikein!"
+        tulos5.innerHTML="Oikein!"
     }
 }
 //virheelliset

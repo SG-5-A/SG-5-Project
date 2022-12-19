@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
 
 
@@ -66,7 +68,9 @@
           <div class="col">
             <b>Tervetuloa Maantieto visaan!</b><br>
             <p>Tässä visassa tulet vastaamaan  viiteen maantieto kysymykseen. <br>
-            Jokaisessa kysymyksessä on kolme  vastaus vaihtoehtoa valitse näistä yksi. </p> 
+            Jokaisessa kysymyksessä on kolme  vastaus vaihtoehtoa valitse näistä yksi. Lopuksi kilkkaa "tulokset" painiketta <span class="material-symbols-outlined">
+              mood
+              </span> </p> 
           </div>
         </div>
       </div>
@@ -169,14 +173,18 @@
       <!--accordion end-->
       <!--start button-->
       <div id="startButton">
-      <p>Klikkaa aloittaaksesi visa!</p>
-      <button  id="next">Aloita!</button>
+      <p>Klikkaa aloittaaksesi maantieto visa!</p>
+      <span class="material-symbols-outlined">
+        arrow_forward
+        </span><button  id="next"><b> Aloita!</b></button><span class="material-symbols-outlined">
+          arrow_back
+      
       </div>
       <!--start button end-->
       <!--result button-->
       <div id="resultButton"> 
 
-      <button id="resultB" >Tulokset</button>
+      <button id="resultB" ><b>Tulokset</b></button>
       </div>
       
 
@@ -204,7 +212,7 @@
                <!--refresh page  button-->
           
             <div id="refreshPage">
-              <button onClick="history.go(0);">Yritä uudelleen</button>
+              <button onClick="history.go(0);"><b> Yritä uudelleen</b></button>
       
       
             </div>
@@ -212,7 +220,6 @@
        
           
       </div>
-
 
       
     
