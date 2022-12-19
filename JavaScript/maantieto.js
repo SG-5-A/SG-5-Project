@@ -7,8 +7,11 @@ let resultButton = document.getElementById("resultButton");
 let resultB = document.getElementById("resultB");
 let results = document.getElementById("resultDiv");
 let infoText = document.getElementById("textContainer");
+let scoreBoard = document.getElementById("scoreBoard");
 answers.addEventListener("click", openaccordion1)
 resultB.addEventListener("click", openResults)
+scoreBoard.innerHTML="";
+
 
 /**
  * @param {Event} event
@@ -38,12 +41,38 @@ function openResults(event){
 
 }
 
-//queryselectorin radioille oikeille vastauksille
-let right1 = document.querySelector(".firstRight");
-let right2 = document.querySelector(".secondRight");
-let right3 = document.querySelector(".thirdRight");
-let right4 = document.querySelector(".forthRight");
-let right5 = document.querySelector(".fifthRight");
+//queryselectorit
+
+let firstQuestion = document.querySelectorAll('input[name="quest"]');
+let secondQuestion = document.querySelectorAll('input[name="quest2"]');
+let thirdQuestion = document.querySelectorAll('input[name="quest3"]');
+let fourthQuestion = document.querySelectorAll('input[name="quest4"]');
+let fifthQuestion = document.querySelectorAll('input[name="quest5"]');
+
+
+
+//oikeat vastaukset 
+let correct1 = document.getElementById("rd3");
+let correct2 = document.getElementById("rd5");
+let correct3 = document.getElementById("rd9");
+let correct4 = document.getElementById("rd10");
+let correct5 = document.getElementById("rd14");
+
+
+//väärät
+
+let wrong1 = document.getElementById("rd1");
+let wrong2 = document.getElementById("rd2");
+let wrong3 = document.getElementById("rd4");
+let wrong4 = document.getElementById("rd6");
+let wrong5 = document.getElementById("rd7");
+let wrong6 = document.getElementById("rd8");
+let wrong7 = document.getElementById("rd11");
+let wrong8 = document.getElementById("rd12");
+let wrong9 = document.getElementById("rd13");
+let wrong10 = document.getElementById("rd15");
+
+
 
 
 
@@ -56,37 +85,91 @@ let tulos5 = document.getElementById("tulos5");
 
 
 // eventlistenerit
-right1.addEventListener("click",testi)
-right2.addEventListener("click",testi2)
-right3.addEventListener("click",testi3)
-right4.addEventListener("click",testi4)
-right5.addEventListener("click",testi5)
+correct1.addEventListener("click",testi)
+correct2.addEventListener("click",testi2)
+correct3.addEventListener("click",testi3)
+correct4.addEventListener("click",testi4)
+correct5.addEventListener("click",testi5)
 
-//functionit
+
+
+//väärät vastaukset
+wrong1.addEventListener("click",incorrect)
+wrong2.addEventListener("click",incorrect)
+wrong3.addEventListener("click",incorrect2)
+wrong4.addEventListener("click",incorrect2)
+wrong5.addEventListener("click",incorrect3)
+wrong6.addEventListener("click",incorrect3)
+wrong7.addEventListener("click",incorrect4)
+wrong8.addEventListener("click",incorrect4)
+wrong9.addEventListener("click",incorrect5)
+wrong10.addEventListener("click",incorrect5)
+
+//functiont vastauksille
 function testi(){
-    if(right1.checked){
-        tulos.innerHTML="oikein!"
+    
+    if(correct1.checked){
+
+        tulos.innerHTML="Oikein!" 
+       
     }
 }
 function testi2(){
-    if(right1.checked){
-        tulos2.innerHTML="oikein!"
+    if(correct2.checked){
+        tulos2.innerHTML="Oikein!"
+        
     }
 }
 function testi3(){
-    if(right1.checked){
-        tulos3.innerHTML="oikein!"
+    if(correct3.checked){
+        tulos3.innerHTML="Oikein!"
     }
 }
 function testi4(){
-    if(right1.checked){
-        tulos4.innerHTML="oikein!"
+    if(correct4.checked){
+        tulos4.innerHTML="Oikein!"
     }
 }
 function testi5(){
-    if(right1.checked){
-        tulos5.innerHTML="oikein!"
+    if(correct5.checked){
+        tulos5.innerHTML="Oikein!"
     }
 }
+//virheelliset
+
+    function incorrect(){
+        if(wrong1.checked || wrong2.checked){
+            tulos.innerHTML="Väärin! Oikea vastaus oli "+ " :Helsinki"
+        }
+    }
+  
+    function incorrect2(){
+        if(wrong3.checked || wrong4.checked){
+            tulos2.innerHTML="Väärin! Oikea vastaus oli "+" :Kiina"
+        }
+    }
+    
+    function incorrect3(){
+        if(wrong5.checked || wrong6.checked){
+            tulos3.innerHTML="Väärin! Oikea vastaus oli "+" :Tyynimeri" 
+        }
+    }
+   
+    function incorrect4(){
+        if(wrong7.checked ||wrong8.checked){
+            tulos4.innerHTML="Väärin! Oieka vastaus oli "+" :Halti"
+        }
+    }
+    function incorrect5(){
+        if(wrong9.checked || wrong10.checked){
+            tulos5.innerHTML="Väärin! Oikea vastaus oli "+" :Pirkanmaa"
+        }
+    }
+    
+   
+    
+
+
 
     
+   
