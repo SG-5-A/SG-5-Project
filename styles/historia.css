@@ -1,43 +1,150 @@
+/*  Jenna Hongisto */
 
-body {
-    background-color:;
+/* * {
+    box-sizing: border-box;
+} */
+
+.container {
+    position: relative;
 }
-#quiz {
+
+.quiz-container {
     background-image: url(/images/oldpaper.jpg);
     padding: 40px;
     border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-/* naviin tilaa */
+
+/* Navbarin värit */
+.navbar {
+    background-color: #5E7D7B;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255)
+}
+
+.navbar-brand {
+    color: rgb(255, 255, 255)
+}
+
+/* Side nav  */
+.sidenav {
+    background-color: #8EBDBA;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav {
+    --bs-nav-link-hover-color: #5E7D7B;
+}
+
+.nav-text {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
 .col-lg-2 {
     padding: 30px;
 }
 
-/* radiot alekkain */
-.answer{
-    display: flex;
-    flex-direction: column;
+.side-nav {
+    padding-top: 20px;
 }
 
 /* tilaa progressiin */
 .progress {
     margin: 20px;
-    background-color: #b4c4c3;
-    
+    background-color: #bbcdcc;   
 }
 
-.next {
-    margin: 20px;
-    background-color: #b4c4c3;
-    border: 1px solid black;
-    border-radius: 10px;
+div.progress-bar {
+    background-color: #8EBDBA;
 }
 
-.sidenav {
+#home h1 {
+    font-family: "Licorice", serif;
+    font-size: 4.5em;
+    font-weight: 600;
+}
+
+#question{
+    margin: 10px;
+    font-family: "Licorice", serif;
+    font-weight: 800;
+    font-size: 2.8em;
+}
+
+#question-number {
+    font-weight: 700;
+    color: #5E7D7B;
+    font-size: 1.2em;
+}
+
+#answer-buttons {
+    display: grid;
+}
+
+.btn {
+    background-color: #8EBDBA;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.btn:hover {
     background-color: #5E7D7B;
-    color: #fff;
-    border-radius: 10px;
 }
 
-.nav-text {
-    color: #fff;
+.btn.wrong {
+    background-color: rgb(216, 103, 103);
+}
+
+.btn.correct {
+    background-color: rgb(113, 173, 113);
+}
+
+.start-btn, .next-btn {
+    font-size: 2em;
+    font-family: "Licorice", serif;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+#correct-answers, #results {
+    font-weight: 800;
+}
+
+h2 {
+    font-family: "Licorice", serif; 
+    font-weight: 800;
+    padding-top: 20px;
+}
+
+p {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    
+    #img1 {
+        width: 400px;
+    }
+
+    #img2 {
+        display: none;
+    }
 }
