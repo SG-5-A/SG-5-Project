@@ -2,6 +2,8 @@
 /*body background color*/
 body {
     background-color: #8EBDBA;
+    font-family: 'Roboto', sans-serif;
+    font-weight:800;
 }
 
 
@@ -14,3 +16,93 @@ body {
 .nav-link {
     color: rgb(255, 255, 255)
 }
+
+
+.container {
+height: 150px;
+
+
+}
+#textContainer{
+    display: none;
+}
+
+#textContainer.visible{
+    display: block;
+}
+
+.container b{
+font-size: 2em;
+}
+
+.container p{
+    font-size: 1.5em;
+}
+
+#accordionExample{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: none;
+    
+}
+#accordionExample.visible{
+    display: block;
+}
+
+
+
+#next{
+   border-radius: 10px;
+   border: 0px;
+   text-align: center;
+   
+}
+
+
+#startButton{
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    margin-top: 200px;
+}
+#startButton.remove{
+    display: none;
+}
+
+
+
+#resultButton{
+    text-align: end;
+    margin-right: 300px;
+    display: none;
+}
+
+#resultButton.visible{
+    display: block;
+
+}
+
+
+
+
+
+#resultDiv{
+    display: none;
+    margin-left: 100px;
+    margin-top: 100px;
+    font-size: 1.3em;
+
+}
+#resultDiv.visible{
+    display: block;
+
+}
+
+#refreshPage{
+    text-align: center;
+    
+    
+    
+}
+

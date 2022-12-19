@@ -5,53 +5,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etusivu</title>
+    <script src="/JavaScript/maantieto.js" defer></script>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<link rel="stylesheet" href="/SG-5-Project/styles/maantieto.css">
+<link rel="stylesheet" href="../styles/maantieto.css">
 <!-- JavaScript Bundle with Popper -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
 
 </head>
 <body>
+  <!--nav start-->  
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Etusivu</a>
+          <a class="navbar-brand" href="/index.html">Etusivu</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Maantieto</a>
+                <a class="nav-link active" aria-current="page" href="maantieto.html">Maantieto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Englanti</a>
+                <a class="nav-link" href="Englanti.html">Englanti</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Yhteiskuntaoppi</a>
+                <a class="nav-link" href="yhteiskuntaoppi2.html">Yhteiskuntaoppi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Historia</a>
+                <a class="nav-link" href="historia.html">Historia</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Matematiikka</a>
+                <a class="nav-link" href="matematiikka.html">Matematiikka</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Fysiikka</a>
+                <a class="nav-link" href="Fysiikka.html">Fysiikka</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Kuvaamataide</a>
+                <a class="nav-link" href="">Kuvaamataide</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Äidinkieli</a>
+                <a class="nav-link" href="aidinkieli.html">Äidinkieli</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tietoja</a>
+                <a class="nav-link" href="tietoja.html">Tietoja</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <!--nav end-->
+      <!--info box-->
+      <div id="textContainer" class="container text-center">
+        <div class="row">
+          <div class="col">
+            <b>Tervetuloa Maantieto visaan!</b><br>
+            <p>Tässä visassa tulet vastaamaan  viiteen maantieto kysymykseen. <br>
+            Jokaisessa kysymyksessä on kolme  vastaus vaihtoehtoa valitse näistä yksi. </p> 
+          </div>
+        </div>
+      </div>
+      <!--info box end-->
+     
+      <!--accordion start-->
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Mikä on suomen pääkaupunki?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name="">Oulu</label>
+              <input id="rd1" type="radio" name="quest" value=""><br>
+              <label for="">Tampere</label>
+              <input id="rd2" type="radio" name="quest" value=""><br>
+              <label for="">Helsinki</label>
+              <input id="rd3" type="radio" name="quest" value="">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Missä valtiossa on suurin väkiluku?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name="">Intia</label>
+              <input id="rd4" type="radio" name="quest2" value=""><br>
+              <label for="">Kiina</label>
+              <input id="rd5" type="radio" name="quest2" value=""><br>
+              <label for="">Yhdysvallat</label>
+              <input id="rd6" type="radio" name="quest2" value="">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Mikä seuraavista vaihtoehdoista on valtameri?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name=""> Itämeri</label>
+              <input id="rd7" type="radio" name="quest3" value=""><br>
+              <label for="">Mustameri</label>
+              <input id="rd8" type="radio" name="quest3" value=""><br>
+              <label for="">Tyynimeri</label>
+              <input id="rd9" type="radio" name="quest3" value="">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Mikä on suomen korkein tunturi?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name=""> Halti</label>
+              <input id="rd10" type="radio" name="quest4" value=""><br>
+              <label for="">Ridnitsohkka</label>
+              <input id="rd11" type="radio" name="quest4" value=""><br>
+              <label for="">Kiedditsohkka</label>
+              <input id="rd12" type="radio" name="quest4" value="">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Missä maakunnassa Tampere sijaitsee?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <label for="" name=""> 	Etelä-Savo</label>
+              <input id="rd13" type="radio" name="quest5" value=""><br>
+              <label for="">	Pirkanmaa</label>
+              <input id="rd14" type="radio" name="quest5" value=""><br>
+              <label for="">Varsinais-Suomi</label>
+              <input id="rd15" type="radio" name="quest5" value="">
+            </div>
+          </div>
+        </div>
+              
+      </div>
+      <!--accordion end-->
+      <!--start button-->
+      <div id="startButton">
+      <p>Klikkaa aloittaaksesi visa!</p>
+      <button  id="next">Aloita!</button>
+      </div>
+      <!--start button end-->
+      <!--result button-->
+      <div id="resultButton"> 
 
+      <button id="resultB" >Tulokset</button>
+      </div>
+      
+
+
+
+      <!--ressults-->
+      <div id="resultDiv">
+        
+        <p>alla näet miten visa meni(huom jos jätit vastaamatta visa ei näytä tulosta): <br>
+        1 = Hylätty <br>
+        2 = Kohtalainen <br>
+        3 = Tyydyttävä <br>
+        4 = Hyvä <br>
+        5 = Erinomainen</p> <br>
+        <p id="scoreBoard"></p>
+          <div>
+            <ul>
+              <li><p id="tulos"></p></li>
+              <li><p id="tulos2"></p></li>
+              <li><p id="tulos3"></p></li>
+              <li><p id="tulos4"></p></li>
+              <li><p id="tulos5"></p></li>
+            
+            </ul>
+            
+            <div id="refreshPage">
+              <button onClick="history.go(0);">Yritä uudelleen</button>
+      
+      
+            </div>
+          </div>
+          <!--refresh page-->
+          
+          
+      </div>
+
+
+      
     
       <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

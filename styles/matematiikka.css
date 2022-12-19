@@ -1,0 +1,392 @@
+body{
+    background-color: #30403F
+}
+.navbar {
+    background-color: #5E7D7B;
+}
+ .nav-link {
+     color: rgb(255, 255, 255)
+}
+ .navbar-brand {
+     color: rgb(255, 255, 255)
+}
+/*Aloitus*/
+#startcontainer{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    height: auto;
+}
+.startbox{
+    margin-top: 50px;
+    display: grid;
+    color: black;
+    width: 70vw;
+    height: 35vw;
+}
+.welcome{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    height: 100%;
+    background-color: #8EBDBA;
+    padding-top: 30px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border: 3px solid #5E7D7B;
+    border-bottom: 0;
+}
+.start-text{
+    padding-left: 80px;
+    padding-right: 80px;
+    grid-row: 2/7;
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #8EBDBA;
+    border-left: 3px solid #5E7D7B;
+    border-right: 3px solid #5E7D7B;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+.startbutton{
+    grid-row: 7/8;
+    grid-column: 1/3;
+    color: rgb(14, 204, 14);
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: transparent;
+    border-bottom: 3px solid #5E7D7B;
+    border-left: 3px solid #5E7D7B;
+    border-right: 3px solid #5E7D7B;
+}
+ .startbutton:hover{
+     background-color: rgb(27, 27, 27);
+     margin-left: 0.333%;
+     transition:1s cubic-bezier(0, 4, 1, 0.5);
+}
+@keyframes correct-animation {
+    0% {
+      background-color: #b6f1b6;
+    }
+    10% {
+      background-color: #B2FF99;
+    }
+    20% {
+      background-color: #99FF66;
+    }
+    30% {
+      background-color: #80FF33;
+    }
+    40% {
+      background-color: #66FF00;
+    }
+    50% {
+      background-color: #4CFF00;
+    }
+    60% {
+        background-color: #66FF00;
+    }
+    70% {
+        background-color: #80FF33;
+    }
+    80% {
+        background-color: #99FF66;
+    }
+    90% {
+        background-color: #94e07b;
+      }
+      100% {
+        background-color: #44d144;
+      }  
+  }
+  @keyframes incorrect-animation {
+    0% {
+      background-color: #FFCCCC;
+    }
+    10% {
+      background-color: #FF9999;
+    }
+    20% {
+      background-color: #FF6666;
+    }
+    30% {
+      background-color: #FF3333;
+    }
+    40% {
+      background-color: #FF0000;
+    }
+    50% {
+      background-color: #CC0000;
+    }
+    60% {
+        background-color: #FF0000;
+    }
+    70% {
+        background-color: #FF3333;
+    }
+    80% {
+        background-color: #FF6666;
+    }
+    90% {
+        background-color: #FF9999;
+      }
+      100% {
+        background-color: #FFCCCC;
+      }  
+  }
+  
+
+.points{
+    display: none;
+    grid-column: 1/3;
+    grid-row: 7/8;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color:#5E7D7B;
+    color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 5%;
+}
+/*Kysymys laattikko tyylit*/
+.questionDivStyle{
+    margin-top: 50px;
+    display: grid;
+    color: black;
+    background-color: #8EBDBA;
+    width: 60vw;
+    min-height: 70vh;
+    height: auto;
+    border-radius: 60px;
+    border-bottom: 5px solid #5E7D7B;
+    border-top: 5px solid #5E7D7B;
+}
+
+ .questionDivStyle header:nth-child(1){
+     grid-column: 1/4;
+     grid-row: 1/2;
+     background-color: #8EBDBA;
+     border-radius: 60px;
+     border-bottom-right-radius: 0;
+     border-bottom-left-radius: 0;
+     text-align: center;
+     font-size: 1.2em;
+     padding-top: 20px;
+}
+ .questionDivStyle header:nth-child(2){
+    grid-row: 2/3;
+    grid-column: 1/4;
+    margin-bottom: 0;
+    background-color: #8EBDBA;
+    text-align: center;
+     padding-left: 10%;
+     padding-right: 80px;
+     font-size: 2em;
+     font-weight: bold;
+}
+ .questionDivStyle input{
+     margin-left: 10%;
+     margin-top: 20px;
+}
+.grida{
+    background-color: darkgray;
+    border: 3px solid #5E7D7B;
+    border-bottom: none;
+    grid-row: 3/4;
+    grid-column: 1/4;
+}
+.gridb{
+    background-color: darkgray;
+    border: 3px solid #5E7D7B;
+    border-bottom: none;
+    grid-row: 4/5;
+    grid-column: 1/4;
+}
+.gridc{
+    background-color: darkgray;
+    border: 3px solid #5E7D7B;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    grid-row: 5/6;
+    grid-column: 1/4;
+}
+.questionDivStyle label{
+    margin-left: 5px;
+    padding: 3px;
+    font-size: 1.2em;
+    border-radius: 3px;
+}
+.questionDivStyle span{
+    font-size: 1.2em;
+}
+.questionDivStyle p{
+    grid-column: 1/3;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    grid-row: 6/7;
+}
+.resultsdivstyle{
+    margin-top: 50px;
+    display: grid;
+    color: black;
+    width: 60vw;
+    min-height: 70vh;
+    height: auto;
+    border-radius: 60px;
+    border-bottom: 5px solid #5E7D7B;
+}
+.resultsdivstyle header{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    color: aliceblue;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+    height: fit-content;
+}
+.resultsdivstyle ul{
+    display: grid;
+    grid-row: 2/7;
+    grid-column: 1/4;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    color: aliceblue;
+    list-style-type: none;
+}
+.resultsdivstyle li{
+    background-color: black;
+    padding-top: 15px;
+    border-left: 3px solid #5E7D7B;
+    border-right: 3px solid #5E7D7B;
+}
+.resultsdivstyle li:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.resultsdivstyle li:nth-child(2){
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.resultsdivstyle li:nth-child(3){
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.resultsdivstyle li:nth-child(4){
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+.resultsdivstyle li:nth-child(5){
+    grid-row: 5/6;
+    grid-column: 1/2;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+/*Kysymys laatikot aluksi piilossa*/
+.questionOne{
+    display: none;
+}
+.questionTwo{
+    display: none;
+}
+.questionThree{
+    display: none;
+}
+.questionFour{
+    display: none;
+}
+.questionFive{
+    display: none;
+}
+#resultsdiv{
+    display: none;
+}
+.qnext{
+   display: none;
+   grid-row: 7/8;
+   grid-column: 2/4;
+   width: 100%;
+   color: rgb(156, 114, 5);
+   background-color: black;
+   font-weight: bold;
+   font-size: 1.3em;
+   border: transparent;
+   border-bottom-right-radius: 70px;
+   border-top-left-radius: 70px;
+}
+ .qnext:hover{
+    background-color: rgb(104, 104, 104);
+ }
+.lockans{
+    grid-row: 6/8;
+    grid-column: 1/4;
+    width: 60%;
+    height: fit-content;
+    padding: 6px;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: rgb(241, 176, 9);
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: transparent;
+    border-radius: 40px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+ .lockans:hover{
+    background-color: rgb(13, 68, 94);
+    margin-left: 20.333%;
+    transition:1s cubic-bezier(0, 4, 1, 0.5);
+}
+
+@media screen and (max-width:800px){
+    .startbox{
+        max-height: 90vh;
+        height: auto;
+    }
+    .questionDivStyle{
+        max-height: 90vh;
+        height: auto;
+    }
+}
+@media screen and (max-width:600px){
+    .startbox{
+        max-height: fit-content;
+        height: auto;
+        max-width: 80vw;
+        width: auto;
+    }
+    .welcome{
+        font-size: 1em;
+    }
+    .start-text{
+        font-size: 0.8em;
+    }
+    .questionDivStyle{
+        max-height: fit-content;
+        height: auto;
+        max-width: 75vw;
+        width: auto;
+    }
+}
