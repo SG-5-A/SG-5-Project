@@ -110,7 +110,7 @@ function testi(){
     
     if(correct1.checked){
 
-        tulos.innerHTML="oikein!"
+        tulos.innerHTML="oikein!" 
        
     }
 }
@@ -139,36 +139,35 @@ function testi5(){
 
     function incorrect(){
         if(wrong1.checked || wrong2.checked){
-            tulos.innerHTML="väärin"
+            tulos.innerHTML="Väärin! Oikea vastaus oli "+ " :Helsinki"
         }
     }
   
     function incorrect2(){
         if(wrong3.checked || wrong4.checked){
-            tulos2.innerHTML="väärin"
+            tulos2.innerHTML="Väärin! Oikea vastaus oli "+" :Kiina"
         }
     }
     
     function incorrect3(){
         if(wrong5.checked || wrong6.checked){
-            tulos3.innerHTML="väärin"
+            tulos3.innerHTML="Väärin! Oikea vastaus oli "+" :Tyynimeri" 
         }
     }
    
     function incorrect4(){
         if(wrong7.checked ||wrong8.checked){
-            tulos4.innerHTML="väärin"
+            tulos4.innerHTML="Väärin! Oieka vastaus oli "+" :Halti"
         }
     }
     function incorrect5(){
         if(wrong9.checked || wrong10.checked){
-            tulos5.innerHTML="väärin"
+            tulos5.innerHTML="Väärin! Oikea vastaus oli "+" :Pirkanmaa"
         }
     }
     
    
-    //ei vastattu
-
+    
 
 
 
