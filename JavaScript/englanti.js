@@ -193,11 +193,11 @@ function calculatePoints(event) {
     event.preventDefault();
 
     let fData = new FormData(hardForm);
-    answer1 = fData.get("animal");
+    answer1 = fData.get("didn't");
 
-    answer2 = fData.get("vehicle");
+    answer2 = fData.get("acronym");
 
-    answer3 = fData.get("country");
+    answer3 = fData.get("time");
 
     answer4 = fData.get("")
 
