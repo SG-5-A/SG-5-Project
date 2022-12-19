@@ -18,21 +18,38 @@ body {
 /*carousellin sijainti + koko*/
 .carousel-item img{
     margin: auto;
-    width: 640px;
-    height: 460px;
+    max-width: 640px;
+    max-height: 460px;
+    width: auto;
+    height: auto;
 }
 
     /* carousellin otsikon sijainti*/
     .carousel-caption {
-            margin-bottom: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        line-height: 100%;
             
+    }
+    .carousel-caption a{
+        width: fit-content;
+        text-decoration: none;
     }
     /* Karusellin otsikkoväri (placeholder)*/
     .carouselHeader{
-        font-size: 110px;
+        font-size: 7vw;
         color: rgb(48, 64, 63);
         -webkit-text-stroke: rgb(207,191,192) 2px;
-        margin-bottom: 55px;
         
     }
 
@@ -54,17 +71,22 @@ body {
 
     /*carousel button*/
     .carousel-control-next{
-        margin-right: 380px;
+        margin-right: 20%;
         margin-top: 145px;
         margin-bottom: 130px;
-        
+        height: 460px;
+        max-height: 460px;
+        height: auto;
     }
     
     /*carousel prev slide*/
     .carousel-control-prev{
-        margin-left: 380px;
+        margin-left: 20%;
         margin-top: 145px;
         margin-bottom: 130px;
+        height: 460px;
+        max-height: 460px;
+        height: auto;
     }
 
     .carousel-control-prev-icon {
@@ -73,4 +95,29 @@ body {
 
     .carousel-control-next-icon {
         display: none;
+    }
+    @media (max-width:800px){
+        .carouselHeader{
+            font-size: 8vw;
+        }
+    }
+    @media(max-width:700px){
+        .carousel-item img{
+            min-width: 350px;
+            min-height: 232px ;
+        }
+        .carouselHeader{
+            font-size: 56px;
+        }
+        .carousel-control-next{
+            margin-right: 9%;
+            margin-top: 145px;
+            margin-bottom: 130px;
+            
+        }
+        .carousel-control-prev{
+            margin-left: 9%;
+            margin-top: 145px;
+            margin-bottom: 130px;
+        }
     }
