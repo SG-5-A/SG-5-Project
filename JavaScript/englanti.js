@@ -114,11 +114,6 @@ function calculatePoints(event) {
     answersArray.push(answer2);
     answersArray.push(answer3);
 
-
-    
-
-    
-
 // Lista jonne tulee mikä vastaus ollut oikein ja mikä väärin
 let listItemOne = document.getElementById("listItemOne")
 let listItemTwo = document.getElementById("listItemTwo")
@@ -180,37 +175,37 @@ function showResult (event) {
 
 // --------------------------------- Hard visa ----------
 
+let hardAnswers = [];
+let hardWrongAnswers = [];
+let hardRightAnswers = [];
+
 let hardForm = document.getElementById("hardQuiz");
-
-
-hardForm.addEventListener("submit", calculatePoints);
+hardForm.addEventListener("submit", calculateHardPoints);
 
 /**
  * @param {Event} event
- */
+*/
 
-function calculatePoints(event) {
+function calculateHardPoints(event) {
     event.preventDefault();
 
-    let fData = new FormData(hardForm);
-    answer1 = fData.get("didn't");
+    let fData = new FormData(hardForm); 
+    hardAnswer1 = fData.get("didnt");
 
-    answer2 = fData.get("acronym");
+    hardAnswer2 = fData.get("acronym");
 
-    answer3 = fData.get("time");
+    hardAnswer3 = fData.get("time");
 
-    answer4 = fData.get("")
+    hardAnswer4 = fData.get("farmer")
 
-    answer5 = fData.get("")
+    hardAnswer5 = fData.get("")
     
-    answersArray.push(answer1);
-    answersArray.push(answer2);
-    answersArray.push(answer3);
-
-
-    
-
-    
+    hardAnswers.push(hardAnswer1);
+    hardAnswers.push(hardAnswer2);
+    hardAnswers.push(hardAnswer3);
+    hardAnswers.push(hardAnswer4);
+    hardAnswers.push(hardAnswer5);
+  
 
 // Lista jonne tulee mikä vastaus ollut oikein ja mikä väärin
 let listItemOne = document.getElementById("listItemOne");
@@ -219,25 +214,39 @@ let listItemThree = document.getElementById("listItemThree");
 let listItemFour = document.getElementById("listItemFour")
 let listItemFive = document.getElementById("listItemFive")
 
-    if(answersArray.includes("Fork")){
+    if(hardAnswers.includes("didn't come")){
         listItemOne.textContent = "Oikein";
-        rightAnswers.push(answer1);
+        hardRightAnswers.push(hardAnswer1);
     } else {
         listItemOne.textContent = "Väärin";
     }
 
-    if(answersArray.includes("Bush")){
+    if(hardAnswers.includes("AFAIK")){
         listItemTwo.textContent = "Oikein";
-        rightAnswers.push(answer2);
+        hardRightAnswers.push(hardAnswer2);
     } else {
         listItemTwo.textContent = "Väärin";
     }
 
-    if(answersArray.includes("Sweetland")){
+    if(hardAnswers.includes("Are you often hungry?")){
         listItemThree.textContent = "Oikein";
-        rightAnswers.push(answer3);
+        hardRightAnswers.push(hardAnswer3);
     } else {
         listItemThree.textContent = "Väärin";
+    }
+
+    if(hardAnswers.includes("Maatilalla")){
+        listItemFour.textContent = "Oikein";
+        hardRightAnswers.push(hardAnswer4);
+    }else {
+        listItemFour.textContent = "Väärin";
+    }
+
+    if(hardAnswers.includes("-")){
+        listItemFive.textContent = "Oikein";
+        hardRightAnswers.push(hardAnswer5);
+    }else {
+        listItemFive.textContent = "Väärin";
     }
 // ----------------------------------------------
 // Pisteytys
@@ -245,26 +254,39 @@ let listItemFive = document.getElementById("listItemFive")
 // Container jonne tulee tulos ja muuta tekstiä
 let resultContainer = document.querySelector(".card-text");
 
-    if(rightAnswers.length == 0){
+    if(hardRightAnswers.length == 0){
         resultContainer.textContent = "Voi ei, mönkään meni. Kokeile uudestaan painamalla nappia";
-    }else if(rightAnswers.length == 1){
+    }else if(hardRightAnswers.length == 1){
         resultContainer.textContent = "Hyvä! Sait yhden oikein, nappia painamalla voit kokeilla uudestaan.";
-    } else if(rightAnswers.length == 2){
+    } else if(hardRightAnswers.length == 2){
         resultContainer.textContent = "Hienoa! Sait kaksi oikein! Nappia painamalla voit kokeilla uudestaan.";
-    } else if(rightAnswers.length == 3){
-        resultContainer.textContent = "Loistavaa! Sait kaikki oikein! Pääset kokeilemaan vaikeampia kysymyksiä vaihtamalla luokkaa.";
+    } else if(hardRightAnswers.length == 3){
+        resultContainer.textContent = "Loistavaa! Sait kolme oikein! Nappia painamalla voit kokeilla uudestaan.";
+    }else if(hardRightAnswers.length == 4){
+        resultContainer.textContent = "Mahtavaa! Sait neljä oikein! Nappia painamalla voit kokeilla uudestaan."
+    } else {
+        resultContainer = "Erinomaista! Sait kaikki oikein. Nämä olivat visan vaikeimmat kysymykset. Taidatkin olla oikea Englannin kielen mestari!"
     }
 
+    
 }
 
-let readyHardButton = document.getElementById("readyHard").addEventListener("click", showResult);
+// Valmis painike
+let readyButtonHard = document.getElementById("readyHard").addEventListener("click", showHardResult);
 
+//Tuloskortti
+let resultCardHard = document.getElementById("hardCard");
 
 /**
  * @param {Event} event 
 */
-function showResult (event) {
-    let clickedResult = event.currentTarget
-    readyHardButton = clickedResult;
-   resultCard.classList.add("visible");
+function showHardResult (event) {
+     let clickedResult = event.currentTarget
+     readyButton = clickedResult;
+    resultCardHard.classList.add("visible");
 }
+
+//let readyHardButton = document.getElementById("ready").addEventListener("click", showHardResult);
+
+
+
