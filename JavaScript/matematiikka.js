@@ -332,6 +332,7 @@ closetest.addEventListener("click", ()=> window.location.reload());
 ShowResult();
 ResultsDiv.style.display = "grid";
 
+//Tyylimäärittely sen mukaan, onko vastaus ollut oikein vai väärin. 
 let answersli = document.querySelectorAll(".results li");
 
 for (let i = 0; i < answersli.length; i++) {
