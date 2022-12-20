@@ -52,6 +52,7 @@
     padding-top: 20px;
 }
 
+/* Visan aloitussivu ja kysymykset */
 #home h1 {
     font-family: "Licorice", serif;
     font-size: 4.5em;
@@ -71,6 +72,7 @@
     font-size: 1.2em;
 }
 
+/* Painikkeet */
 #answer-buttons {
     display: grid;
 }
@@ -106,10 +108,12 @@
     align-items: center;
 }
 
+/* Piilottaa elementtejä */
 .hide {
     display: none;
 }
 
+/* Visan loppu */
 #correct-answers, #results, #feedback {
     font-weight: 800;
 }
@@ -124,6 +128,7 @@ p {
     font-weight: 600;
 }
 
+/* Mobiilisivu */
 @media screen and (max-width: 767px) {
     
     #img1 {
