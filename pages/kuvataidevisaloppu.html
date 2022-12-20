@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Sara Pohjola">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KV aloitus</title>
 
-        <!-- CSS only -->
+    <title>KV Loppu</title>
+
+            <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../styles/styleKV_01.css">
 </head>
 <body>
-      <!-- Nav Bar horisontaalinen-->
+          <!-- Nav Bar horisontaalinen-->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">Etusivu</a>
@@ -55,15 +56,43 @@
     </div>
   </nav>
     <div class="container">
-        <div id="home" class="flexCol flexCen">
-          <h1>Aloita kuvataidevisa?</h1>
-         <a href="../pages/kuvataidevisa.html" class="button">Aloita</a>
+        <div id="end" class="flexCen flexCol">
+            <h1 id="scoreRes">0</h1>
+            <form class="endForm">
+                <h2 id="endText">a</h2>
+            </form>
+            <a href="../pages/kuvataidevisa.html" class="button">Uudestaan</a>
+            <a href="../index.html" class="button">Kotisivulle</a>
+
+                <h2>Oikeat vastaukset</h1>
+                <p class="answerQ">
+                    Miksi kutsutaan alustaa, johon maalaaja laittaa värejä?
+                    - Paletti, on värien sekoitukseen
+                    tarkoitettu työväline.
+                    
+                    Mikä on yleisin paperikoko?
+                    - A4, sitä käyttävät suurin osa
+                    maailmasta, poikkeuksena on vain 7
+                    maata.
+    
+                    Mikä näistä ei liukene veteen?
+                    - Öljyväri, sillä öljy ja vesi eivät pysty sekoittumaan.
+    
+                    Mikä on paras työkalu ympyrän piirtämiseen?
+                    - Harppi, ainoa vaihtoehdoista joilla
+                    pystyy piirtämään säännölisen ympyrän.
+    
+                    Mitä näistä käytetään esim. mukien tekoon?
+                    - Savi, sillä se kovettuu uunissa ja kestää veden.
+                </p>
         </div>
     </div>
 
-      <!-- JavaScript Bundle with Popper -->
+          <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
   crossorigin="anonymous"></script>
+
+    <script src="../JavaScript/KVloppuJS.js"></script>
 </body>
 </html>

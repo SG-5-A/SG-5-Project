@@ -14,7 +14,6 @@ function closeIntroduction (e) {
     start = clickedStart;
     easyQuiz.classList.add("visible");
     WELCOME.remove("visible");
-
 }
 
 // VISOJEN NÄKYVYYS
@@ -22,10 +21,6 @@ function closeIntroduction (e) {
 //1-2 luokan visan näkyvyys ja muiden visojen piilotus
 let easy = document.getElementById("easy");
 let easyQuiz = document.getElementById("easyQuiz");
-
-
-
-//easyQuiz.classList.add("visible");
 
 easy.addEventListener("click", openEasyQuiz);
 
@@ -368,8 +363,8 @@ let hardResultContainer = document.getElementById("hardText");
         hardResultContainer.textContent = "Loistavaa! Sait kolme oikein! Nappia painamalla voit kokeilla uudestaan.";
     }else if(hardRightAnswers.length == 4){
         hardResultContainer.textContent = "Mahtavaa! Sait neljä oikein! Nappia painamalla voit kokeilla uudestaan."
-    } else {
-        hardResultContainer = "Erinomaista! Sait kaikki oikein. Nämä olivat visan vaikeimmat kysymykset. Taidatkin olla oikea Englannin kielen mestari!"
+    } else if(hardRightAnswers.length == 5){
+        hardResultContainer.textContent = "Erinomaista! Sait kaikki oikein. Nämä olivat visan vaikeimmat kysymykset. Taidatkin olla oikea Englannin kielen mestari!"
     }
 }
 
