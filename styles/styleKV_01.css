@@ -1,0 +1,98 @@
+
+
+/*Aloitus sivu*/
+
+body {
+    background-color: #30403F;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+
+
+/*Tekijä: Sara Pohjola*/
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCen{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button{
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    width: 5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #8EBDBA;
+    border-radius: 6px;
+}
+
+
+
+/*Loppu*/
+.endForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20rem;
+}
+
+#endText{
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#scoreRes{
+    margin-top: 50%;
+    margin-bottom: 0.5rem;
+}
+
+h2{
+    color: #fff;
+    margin-top: 10%;
+}
+
+.answerQ{
+    color: #fff;
+    position: relative;
+    font-size: 0.8rem;
+    white-space: pre;
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: #5E7D7B;
+    
+}

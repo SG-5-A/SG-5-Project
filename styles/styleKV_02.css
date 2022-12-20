@@ -1,0 +1,91 @@
+
+/*Tekijä: Sara Pohjola*/
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCen{
+    justify-content: center;
+    align-items: center;
+}
+
+.jusCen{
+    justify-content: center;
+}
+
+.texCen{
+    text-align: center;
+}
+
+
+body {
+    color: #fff;
+    background-color: #30403F;
+}
+
+.choices{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-radius: 7px;
+    background-color: #5E7D7B;
+    font-size: 1rem;
+    min-width: 80rem;
+    padding: 3px;
+}
+
+
+.choicePre{
+    padding: 2px;
+    color: #fff;
+}
+
+.choiceText{
+    margin-left: 10px;
+    padding: 2px;
+    width: 100%;
+}
+
+.correct{
+    background-color: chartreuse;
+}
+
+.wrong{
+    background-color: crimson;
+}
+
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hudPre{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1px;
+}
+
+.mainText{
+    text-align: center;
+}
+
+#question{
+    padding: 1px;
+    font-size: 1.6rem;
+}
+
+#realAnswer{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .choices{
+        min-width: 40rem;
+    }
+}
+.navbar {
+    background-color: #5E7D7B;
+    
+}
