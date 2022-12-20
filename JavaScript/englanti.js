@@ -368,8 +368,8 @@ let hardResultContainer = document.getElementById("hardText");
         hardResultContainer.textContent = "Loistavaa! Sait kolme oikein! Nappia painamalla voit kokeilla uudestaan.";
     }else if(hardRightAnswers.length == 4){
         hardResultContainer.textContent = "Mahtavaa! Sait neljä oikein! Nappia painamalla voit kokeilla uudestaan."
-    } else {
-        hardResultContainer = "Erinomaista! Sait kaikki oikein. Nämä olivat visan vaikeimmat kysymykset. Taidatkin olla oikea Englannin kielen mestari!"
+    } else if(hardRightAnswers.length == 5){
+        hardResultContainer.textContent = "Erinomaista! Sait kaikki oikein. Nämä olivat visan vaikeimmat kysymykset. Taidatkin olla oikea Englannin kielen mestari!"
     }
 }
 
