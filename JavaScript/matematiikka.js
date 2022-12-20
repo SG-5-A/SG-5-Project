@@ -10,9 +10,10 @@ let ResultsDiv = document.getElementById("resultsdiv");
 let startbutton = document.querySelector(".startbutton");
 let buttonToQ2 = document.querySelector(".q1next");
 let buttontoQ3 = document.querySelector(".q2next");
-let buttontoQ4 = document.querySelector(".q3next")
-let buttontoQ5 = document.querySelector(".q4next")
-let finishbutton = document.querySelector(".finish")
+let buttontoQ4 = document.querySelector(".q3next");
+let buttontoQ5 = document.querySelector(".q4next");
+let finishbutton = document.querySelector(".finish");
+let closetest = document.querySelector(".closetest");
 
 //funktio palauttaa html:stä labelin, classilla ".q" + kysymyksen numero + "label" + vaihtoehdon kirjain.
 function label(number, letter){
@@ -117,7 +118,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionB.disabled = true;
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
-      answers.push([labelA.innerHTML, " Oikein" + "<br>"]);
+      answers.push([labelA.innerHTML, " Oikein + 2p" + "<br>"]);
     }//Jos väärin 
     if(labelA.innerHTML == incorrect1 || labelA.innerHTML == incorrect2){
       console.log("incorrect");
@@ -125,7 +126,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionB.disabled = true;
       optionC.disabled = true;
       style_incorrect(lockbutton, nextbutton, p, explanation);
-      answers.push([labelA.innerHTML, " Väärin" + "<br>" + "Oikea vastaus oli " + correct]);
+      answers.push([labelA.innerHTML, " Väärin + 0p" + "<br>" + "Oikea vastaus oli " + correct]);
     }
   }   if (optionB.checked) {
     if (labelB.innerHTML == correct) {
@@ -134,7 +135,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionC.disabled = true;
       style_correct(lockbutton, nextbutton, p);
-      answers.push([labelB.innerHTML, " Oikein" + "<br>"]);
+      answers.push([labelB.innerHTML, " Oikein + 2p" + "<br>"]);
     }
     if(labelB.innerHTML == incorrect1 || labelB.innerHTML == incorrect2){
       console.log("incorrect");
@@ -142,7 +143,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionC.disabled = true;
       style_incorrect(lockbutton, nextbutton, p, explanation);
-      answers.push([labelB.innerHTML, " Väärin" + "<br>" + "Oikea vastaus oli " + correct]);
+      answers.push([labelB.innerHTML, " Väärin + 0p" + "<br>" + "Oikea vastaus oli " + correct]);
     }
   }   if (optionC.checked) {
     if (labelC.innerHTML == correct) {
@@ -151,7 +152,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionB.disabled = true;
       style_correct(lockbutton, nextbutton, p);
-      answers.push([labelC.innerHTML, " Oikein" + "<br>"]);
+      answers.push([labelC.innerHTML, " Oikein + 2p" + "<br>"]);
     }
     if(labelC.innerHTML == incorrect1 || labelC.innerHTML == incorrect2){
       console.log("incorrect");
@@ -159,7 +160,7 @@ function check_answer(lockbutton, nextbutton, optionA, optionB, optionC, labelA,
       optionA.disabled = true;
       optionB.disabled = true;
       style_incorrect(lockbutton, nextbutton, p, explanation);
-      answers.push([labelC.innerHTML, " Väärin" + "<br>" + "Oikea vastaus oli " + correct]);
+      answers.push([labelC.innerHTML, " Väärin + 0p" + "<br>" + "Oikea vastaus oli " + correct]);
     }
   } 
 })
@@ -207,13 +208,13 @@ correctQ2, incorrect1Q2, incorrect2Q2 , answerTwo, explanation2);
 
 // Kysymys 3 vastaukset
 // Luo satunnaisen parillisen luvun. 
-function generatePair(min, max, num1) {
+function generatePair(min, max,) {
   var rtn = Math.floor(Math.random() * (max - min + 1)) + min;
  
   if (rtn % 2 === 1) {
     return rtn + 1;
   } else {
-    return generatePair(min, max, num1);
+    return generatePair(min, max);
   }
 }
 
@@ -317,13 +318,35 @@ function ShowResult(){
 
 finishbutton.addEventListener("click", FinishQuiz);
 
-
+//Palauttaa tulokset
 function FinishQuiz(){
 
 questionFivediv.style.display = "none";
 ResultsDiv.classList.add("resultsdivstyle");
 ResultsDiv.appendChild(span);
 span.style.setProperty("text-align", "center", "important");
+span.style.setProperty("border-bottom-left-radius", "50px")
+span.style.setProperty("padding-left", "10px")
+closetest.style.display = "block";
+closetest.addEventListener("click", ()=> window.location.reload());
 ShowResult();
 ResultsDiv.style.display = "grid";
+
+//Tyylimäärittely sen mukaan, onko vastaus ollut oikein vai väärin. 
+let answersli = document.querySelectorAll(".results li");
+
+for (let i = 0; i < answersli.length; i++) {
+  if(answersli[i].innerHTML.indexOf("Oikein") !== -1){
+    answersli[i].style.color = "green";
+  }
+  if(answersli[i].innerHTML.indexOf("Väärin") !== -1){
+    answersli[i].style.color = "red";
+  }
+}
+if(points <= 5){
+  span.style.backgroundColor = "red";
+}
+if(points > 5){
+span.style.backgroundColor = "green";
+}
 }

@@ -23,59 +23,61 @@ body{
     display: grid;
     color: black;
     width: 70vw;
-    height: 35vw;
+    min-height: 35vw;
+    height: auto;
+    border-bottom: 5px solid #5E7D7B;
+    border-top: 5px solid #5E7D7B;
+    border-radius: 50px;
 }
 .welcome{
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 1/2;
     text-align: center;
     font-size: 2em;
     font-weight: bold;
+    color: aliceblue;
     height: 100%;
-    background-color: #8EBDBA;
     padding-top: 30px;
     border-top-right-radius: 200px;
     border-top-left-radius: 200px;
-    border: 3px solid #5E7D7B;
-    border-bottom: 0;
 }
 .start-text{
     padding-left: 80px;
     padding-right: 80px;
-    grid-row: 2/7;
-    grid-column: 1/3;
+    grid-row: 2/4;
+    padding: 5%;
+    grid-column: 1/4;
     text-align: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 1.2em;
     background-color: #8EBDBA;
-    border-left: 3px solid #5E7D7B;
-    border-right: 3px solid #5E7D7B;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    
+    border-left: 5px solid #5E7D7B;
+    border-right: 5px solid #5E7D7B;
+    border-radius: 50px;
 }
 .startbutton{
-    grid-row: 7/8;
-    grid-column: 1/3;
+    grid-row: 4/5;
+    grid-column: 1/4;
     color: rgb(14, 204, 14);
     background-color: black;
     font-weight: bold;
     font-size: 1.3em;
-    width: 100%;
-    height: 100%;
-    border-bottom-right-radius: 200px;
-    border-bottom-left-radius: 200px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border: transparent;
-    border-bottom: 3px solid #5E7D7B;
-    border-left: 3px solid #5E7D7B;
-    border-right: 3px solid #5E7D7B;
+    width: 70%;
+    height: 80%;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 8px;
+    border-radius: 50px;
 }
  .startbutton:hover{
      background-color: rgb(27, 27, 27);
-     margin-left: 0.333%;
+     margin-left: 15.333%;
      transition:1s cubic-bezier(0, 4, 1, 0.5);
 }
+/* Pistelaatikkoon tulee näkyviin animaatio käyttäjän vastattua*/
 @keyframes correct-animation {
     0% {
       background-color: #b6f1b6;
@@ -150,7 +152,7 @@ body{
 
 .points{
     display: none;
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 7/8;
     font-size: 1.5em;
     font-weight: bold;
@@ -242,6 +244,7 @@ body{
     font-weight: bold;
     grid-row: 6/7;
 }
+/*Tulos näkymän tyylit */
 .resultsdivstyle{
     margin-top: 50px;
     display: grid;
@@ -273,10 +276,11 @@ body{
     list-style-type: none;
 }
 .resultsdivstyle li{
-    background-color: black;
+    background-color: darkgray;
     padding-top: 15px;
     border-left: 3px solid #5E7D7B;
     border-right: 3px solid #5E7D7B;
+    font-weight: bolder;
 }
 .resultsdivstyle li:nth-child(1){
     grid-row: 1/2;
@@ -287,20 +291,24 @@ body{
 .resultsdivstyle li:nth-child(2){
     grid-row: 2/3;
     grid-column: 1/2;
+    border-top:3px solid rgb(70, 70, 70) ;
 }
 .resultsdivstyle li:nth-child(3){
     grid-row: 3/4;
     grid-column: 1/2;
+    border-top:3px solid rgb(70, 70, 70) ;
 }
 .resultsdivstyle li:nth-child(4){
     grid-row: 4/5;
     grid-column: 1/2;
+    border-top:3px solid rgb(70, 70, 70) ;
 }
 .resultsdivstyle li:nth-child(5){
     grid-row: 5/6;
     grid-column: 1/2;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    border-top:3px solid rgb(70, 70, 70) ;
 }
 /*Kysymys laatikot aluksi piilossa*/
 .questionOne{
@@ -321,12 +329,13 @@ body{
 #resultsdiv{
     display: none;
 }
+/*Painikkeet*/
 .qnext{
    display: none;
    grid-row: 7/8;
    grid-column: 2/4;
    width: 100%;
-   color: rgb(156, 114, 5);
+   color:  rgb(241, 176, 9);
    background-color: black;
    font-weight: bold;
    font-size: 1.3em;
@@ -335,7 +344,8 @@ body{
    border-top-left-radius: 70px;
 }
  .qnext:hover{
-    background-color: rgb(104, 104, 104);
+    background-color:rgb(32, 32, 32);
+    transition: 1s cubic-bezier(0, 4, 1, 0.5);
  }
 .lockans{
     grid-row: 6/8;
@@ -359,7 +369,23 @@ body{
     margin-left: 20.333%;
     transition:1s cubic-bezier(0, 4, 1, 0.5);
 }
-
+.closetest{
+    display: none;
+    grid-row: 7/8;
+    grid-column: 2/4;
+    width: 100%;
+    color:  rgb(241, 176, 9);
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: transparent;
+    border-bottom-right-radius: 70px;
+    border-top-left-radius: 70px;
+ }
+  .closetest:hover{
+     background-color:rgb(32, 32, 32);
+     transition: 1s cubic-bezier(0, 4, 1, 0.5);
+  }
 @media screen and (max-width:800px){
     .startbox{
         max-height: 90vh;
@@ -376,12 +402,6 @@ body{
         height: auto;
         max-width: 80vw;
         width: auto;
-    }
-    .welcome{
-        font-size: 1em;
-    }
-    .start-text{
-        font-size: 0.8em;
     }
     .questionDivStyle{
         max-height: fit-content;

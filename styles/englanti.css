@@ -27,7 +27,7 @@ html, body {
 .accordion-body {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content:flex-start;
     flex-wrap: wrap;
     
 }
@@ -108,10 +108,39 @@ form {
 
 .card.visible{  
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 30%;
     left: 45%;
     margin: -50px 0 0 -50px;
+    height: fit-content;
+    width: 500px;
+    align-self: center;
+    background-color: #5E7D7B;
+    box-shadow: 1px 5px 10px 5px;
+}
+.hardCard {
+    display: none;
+}
+#hardCard.visible{  
+    display: flex;
+    position: fixed;
+    top: 30%;
+    left: 45%;
+    margin: -100px 0 0 -50px;
+    height: fit-content;
+    width: 500px;
+    align-self: center;
+    background-color: #5E7D7B;
+    box-shadow: 1px 5px 10px 5px;
+}
+
+
+#mediumCard.visible{  
+    display: flex;
+    position: fixed;
+    top: 30%;
+    left: 45%;
+    margin: -100px 0 0 -50px;
     height: fit-content;
     width: 500px;
     align-self: center;
