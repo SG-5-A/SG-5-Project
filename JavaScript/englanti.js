@@ -1,3 +1,5 @@
+//Tekijä: JORMA ÅMAN
+
 // Tervetuloa/ohjeistus tekstin poistaminen näkyvistä "Aloita" painiketta painamalla
 let start = document.getElementById("start");
 const WELCOME = document.getElementById("box").classList;
