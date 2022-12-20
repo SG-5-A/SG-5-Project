@@ -54,7 +54,7 @@ let nextButton = document.getElementById("next-btn");
 let correctAnswers = document.getElementById("correct-answers");
 let results = document.getElementById("results");
 let questionNumber = document.getElementById("question-number");
-questionNumber.textContent = "Kysymys 1/5";
+let feedback = document.getElementById("feedback");
 
 
 let score = 0;
@@ -89,8 +89,6 @@ function startGame() {
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    
-
 }
 
 // Näyttää kysymyksen
@@ -118,17 +116,26 @@ function resetState() {
 }
 
 // Vastauksen valitsemisen jälkeen näyttää seuraavan kysymyksen tai tulokset
-function selectAnswer() {
+function selectAnswer(e) {
+    let selectedButton = e.target;
+    let correct = selectedButton.dataset.correct;
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerColor(button, button.dataset.correct);
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        
         nextButton.classList.remove("hide");
+        showScore(correct);
         } else {
             correctAnswers.classList.remove("hide");
             results.classList.remove("hide");
+            feedback.classList.remove("hide");
             results.textContent= "Sait oikein " + score +  "/5 kysymyksestä.";
+            if (score <= 3) {
+                feedback.textContent = "Harjoittele lisää.";
+            }
+            if (score >= 4) {
+                feedback.textContent = "Mahtavaa!";
+            }
         }
 }
 
@@ -142,6 +149,13 @@ function setAnswerColor(element, correct) {
         
     } else {
         element.classList.add("wrong");
+    }
+}
+
+// Laskee oikeat vastaukset
+function showScore(correct) {
+    if (correct) {
+        score++;
     }
 }
 

@@ -110,7 +110,7 @@
     display: none;
 }
 
-#correct-answers, #results {
+#correct-answers, #results, #feedback {
     font-weight: 800;
 }
 
