@@ -1,9 +1,5 @@
 /*  Jenna Hongisto */
 
-/* * {
-    box-sizing: border-box;
-} */
-
 .container {
     position: relative;
 }
@@ -54,16 +50,6 @@
 
 .side-nav {
     padding-top: 20px;
-}
-
-/* tilaa progressiin */
-.progress {
-    margin: 20px;
-    background-color: #bbcdcc;   
-}
-
-div.progress-bar {
-    background-color: #8EBDBA;
 }
 
 #home h1 {
