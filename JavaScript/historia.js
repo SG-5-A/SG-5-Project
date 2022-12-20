@@ -1,5 +1,6 @@
 // Jenna Hongisto
 
+// Kysymykset
 let questions = [
     {
         question: "Minkä eläimen ruumis sfinksillä on?",
@@ -41,10 +42,9 @@ let questions = [
             { text: "Tummasurma", correct: false}
         ]
     }
-];
+]
 
 // Muuttujat
-// let grade5 = document.getElementById("grade5");
 let startButton = document.getElementById("start-btn");
 let welcomeDiv = document.getElementById("home");
 let questionContainerElement = document.getElementById("question-container");
@@ -53,8 +53,6 @@ let answerButtonsElement = document.getElementById("answer-buttons");
 let nextButton = document.getElementById("next-btn");
 let correctAnswers = document.getElementById("correct-answers");
 let results = document.getElementById("results");
-// let progressBar = document.querySelector(".progress-bar");
-// let progressPercent = document.querySelector("[aria-valuenow]").value;
 let questionNumber = document.getElementById("question-number");
 questionNumber.textContent = "Kysymys 1/5";
 
@@ -64,6 +62,7 @@ let progress = 1;
 
 let shuffledQuestions, currentQuestionIndex;
 
+// Aloituspainike ja kysymysten määrä näkyy
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
@@ -72,7 +71,7 @@ nextButton.addEventListener("click", () => {
 
     questionNumber.textContent = "Kysymys " + progress + "/5";
     setNextQuestion();
-});
+})
 
 // Aloittaa visan
 function startGame() {
@@ -84,7 +83,7 @@ function startGame() {
     questionContainerElement.classList.remove("hide");
     
     setNextQuestion();
-};
+}
 
 // Valmistaa seuraavaan kysymykseen
 function setNextQuestion() {
@@ -92,7 +91,7 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
     
 
-};
+}
 
 // Näyttää kysymyksen
 function showQuestion(question) {
@@ -107,7 +106,7 @@ function showQuestion(question) {
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
     })
-};
+}
 
 // Puhdistaa vastaukset
 function resetState() {
@@ -116,14 +115,10 @@ function resetState() {
         answerButtonsElement.removeChild
         (answerButtonsElement.firstChild);
     }
-};
+}
 
 // Vastauksen valitsemisen jälkeen näyttää seuraavan kysymyksen tai tulokset
 function selectAnswer() {
-    // correctOrNot();
-    // let selectedButton = e.target;
-    // let correct = selectedButton.dataset.correct;
-    // setAnswerColor = (document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerColor(button, button.dataset.correct);
     })
@@ -131,13 +126,11 @@ function selectAnswer() {
         
         nextButton.classList.remove("hide");
         } else {
-            
-            // startButton.innerText = "Restart";
             correctAnswers.classList.remove("hide");
             results.classList.remove("hide");
             results.textContent= "Sait oikein " + score +  "/5 kysymyksestä.";
         }
-};
+}
 
 
 function setAnswerColor(element, correct) {
@@ -150,14 +143,7 @@ function setAnswerColor(element, correct) {
     } else {
         element.classList.add("wrong");
     }
-};
-
-// function correctOrNot(correct) {
-//     if (correct) {
-//         score++;
-//         console.log("Score " + score++);
-//     }
-// };
+}
 
 function clearAnswerColor(element) {
     element.classList.remove("correct");
