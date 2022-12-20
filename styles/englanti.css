@@ -1,6 +1,6 @@
 html, body {
     margin: 0px;
-    height: 100%;
+    height: fit-content;
 }
 
 .accordion {
@@ -109,7 +109,7 @@ form {
     left: 45%;
     margin: -50px 0 0 -50px;
     height: fit-content;
-    width: 500px;
+    width: 25rem;;
     align-self: center;
     background-color: #5E7D7B;
     box-shadow: 1px 5px 10px 5px;
@@ -126,7 +126,7 @@ form {
     left: 45%;
     margin: -100px 0 0 -50px;
     height: fit-content;
-    width: 500px;
+    width: 25rem;;
     align-self: center;
     background-color: #5E7D7B;
     box-shadow: 1px 5px 10px 5px;
@@ -139,7 +139,7 @@ form {
     left: 45%;
     margin: -100px 0 0 -50px;
     height: fit-content;
-    width: 500px;
+    width: 25rem;
     align-self: center;
     background-color: #5E7D7B;
     box-shadow: 1px 5px 10px 5px;
@@ -197,4 +197,57 @@ img {
     margin-top: 150px;
     border-radius: 4px;
     box-shadow: 0px 5px 5px;   
+}
+
+@media screen and (max-width: 640px) {
+    .card.visible{  
+        display: flex;
+        position: fixed;
+        top: 10%;
+        left: 12%;
+        margin: -50px 0 0 -20px;
+        height: fit-content;
+        width: 20rem;
+        align-self: center;
+        background-color: #5E7D7B;
+        box-shadow: 1px 5px 10px 5px;
+    }
+    #mediumCard.visible{  
+        display: flex;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+        margin: -50px 0 0 -50px;
+        height: fit-content;
+        width: 20rem;
+        align-self: center;
+        background-color: #5E7D7B;
+        box-shadow: 1px 5px 10px 5px;
+    }
+    #hardCard.visible{  
+        display: flex;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+        margin: -50px 0 0 -50px;
+        height: fit-content;
+        width: 20rem;
+        align-self: center;
+        background-color: #5E7D7B;
+        box-shadow: 1px 5px 10px 5px;
+
+    }
+    img {
+    display: none;
+    }
+
+    .box.visible {
+        height: 791px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .box.visible {
+        height: 791px;
+    }
 }
