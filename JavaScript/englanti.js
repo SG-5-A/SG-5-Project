@@ -14,7 +14,6 @@ function closeIntroduction (e) {
     start = clickedStart;
     easyQuiz.classList.add("visible");
     WELCOME.remove("visible");
-
 }
 
 // VISOJEN NÄKYVYYS
@@ -22,10 +21,6 @@ function closeIntroduction (e) {
 //1-2 luokan visan näkyvyys ja muiden visojen piilotus
 let easy = document.getElementById("easy");
 let easyQuiz = document.getElementById("easyQuiz");
-
-
-
-//easyQuiz.classList.add("visible");
 
 easy.addEventListener("click", openEasyQuiz);
 
