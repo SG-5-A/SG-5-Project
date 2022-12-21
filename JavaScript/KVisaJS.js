@@ -1,7 +1,7 @@
 
 /**https://www.youtube.com/watch?v=f4fB9Xg2JEY on käytetty paljon apuna tämän koodin tekemisessä  HTML:ssä ja Javascriptissä*/
 
-/*Tekijä: Sara Pohjola*/
+/*Tekijä: Sara P.*/
 
 
 const question = document.querySelector("#question");

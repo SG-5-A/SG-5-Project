@@ -1,4 +1,4 @@
-/*Tekijä: Sara Pohjola*/
+/*Tekijä: Sara P.*/
 
 let finalScore = document.querySelector("#scoreRes");
 

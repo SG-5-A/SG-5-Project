@@ -2,13 +2,15 @@ html, body {
     margin: 0px;
     height: 100%;
 }
+
 .accordion {
     position: relative;
 }
+
 .navbar {
-    background-color: #5E7D7B;
-    
+    background-color: #5E7D7B;  
 }
+
 .nav-link {
     color: rgb(200, 196, 196)
 }
@@ -24,25 +26,21 @@ html, body {
 .accordion-button {
     background-color: #8EBDBA;
 }
+
 .accordion-body {
     display: flex;
     flex-direction: column;
     align-content:flex-start;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 
 span {
     margin-top: 20px;
-    display: flex;
-    
-    
-    
+    display: flex; 
 }
 
 input {
    margin-right: 5px;
-   
    
 }
 
@@ -69,14 +67,13 @@ form {
     border: solid black 1px;
     color: black;
 }
-
+/* Visojen ja tuloskorttien näkyvyys */
 #easyQuiz {
     display: none;
 }
 
 #easyQuiz.visible {
     display: block;
-    
 }
 
 #mediumQuiz {
@@ -84,8 +81,7 @@ form {
 }
 
 #mediumQuiz.visible {
-    display: block;
-    
+    display: block; 
 }
 
 #hardQuiz {
@@ -109,44 +105,48 @@ form {
 .card.visible{  
     display: flex;
     position: fixed;
-    top: 30%;
+    top: 10%;
     left: 45%;
     margin: -50px 0 0 -50px;
     height: fit-content;
-    width: 500px;
-    align-self: center;
-    background-color: #5E7D7B;
-    box-shadow: 1px 5px 10px 5px;
-}
-.hardCard {
-    display: none;
-}
-#hardCard.visible{  
-    display: flex;
-    position: fixed;
-    top: 30%;
-    left: 45%;
-    margin: -100px 0 0 -50px;
-    height: fit-content;
-    width: 500px;
+    width: 25rem;;
     align-self: center;
     background-color: #5E7D7B;
     box-shadow: 1px 5px 10px 5px;
 }
 
+.hardCard {
+    display: none;
+}
+
+#hardCard.visible{  
+    display: flex;
+    position: fixed;
+    top: 15%;
+    left: 45%;
+    margin: -100px 0 0 -50px;
+    height: fit-content;
+    width: 25rem;;
+    align-self: center;
+    background-color: #5E7D7B;
+    box-shadow: 1px 5px 10px 5px;
+}
 
 #mediumCard.visible{  
     display: flex;
     position: fixed;
-    top: 30%;
+    top: 15%;
     left: 45%;
     margin: -100px 0 0 -50px;
     height: fit-content;
-    width: 500px;
+    width: 25rem;
     align-self: center;
     background-color: #5E7D7B;
     box-shadow: 1px 5px 10px 5px;
 }
+
+/* Visojen ja tuloskorttien näkyvyys päättyy */
+
 img {
     height: 300px;
 }
@@ -154,6 +154,7 @@ img {
 .list-group-item {
     background-color: #5E7D7B;
 }
+
 .card-body > a {
     border: solid 1px black;
     border-radius: 3px;
@@ -168,6 +169,7 @@ img {
     color: #fff;
 }
 
+/* Tervetuloa sivu ja sen näkyvyys */
 .box {
     display: none;
 }
@@ -195,4 +197,57 @@ img {
     margin-top: 150px;
     border-radius: 4px;
     box-shadow: 0px 5px 5px;   
+}
+
+@media screen and (max-width: 640px) {
+    .card.visible{  
+        display: flex;
+        position: fixed;
+        top: 10%;
+        left: 12%;
+        margin: -50px 0 0 -20px;
+        height: fit-content;
+        width: 20rem;
+        align-self: center;
+        background-color: #5E7D7B;
+        box-shadow: 1px 5px 10px 5px;
+    }
+    #mediumCard.visible{  
+        display: flex;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+        margin: -50px 0 0 -50px;
+        height: fit-content;
+        width: 20rem;
+        align-self: center;
+        background-color: #5E7D7B;
+        box-shadow: 1px 5px 10px 5px;
+    }
+    #hardCard.visible{  
+        display: flex;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+        margin: -50px 0 0 -50px;
+        height: fit-content;
+        width: 20rem;
+        align-self: center;
+        background-color: #5E7D7B;
+        box-shadow: 1px 5px 10px 5px;
+
+    }
+    img {
+    display: none;
+    }
+
+    .box.visible {
+        height: 791px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .box.visible {
+        height: 791px;
+    }
 }
